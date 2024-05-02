@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Esto asegura que el cuerpo tenga al menos el tamaño completo de la ventana */
+}
+
+.contenedor {
+    flex: 1;
+    /* Esto hace que el contenedor principal ocupe todo el espacio disponible */
+}
+
+header {
+    width: 100%;
+}
+
+.sup_rojo {
+    background-color: red;
+    color: white;
+    text-align: right;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+}
+
+.inf_negro {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-left: 30%;
+    padding-right: 30%;
+    border: rgb(255, 255, 255) 8px inset;
+
+}
+
+.bloques {
+    flex: 1;
+    /* Distribuye equitativamente el espacio disponible */
+    box-sizing: border-box;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: medium;
+}
+
+.item-a {
+    grid-area: presidente;
+}
+
+.item-b {
+    grid-area: textohist;
+}
+
+
+.contenedorhistoria {
+    display: grid;
+    padding: 20px 80px 20px 80px;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+        "presidente textohist "
+
+}
+
+.img-logo {
+    color: #fff;
+    width: 80px;
+
+}
+
+.img-logo:hover {
+    background-color: #ff4800;
+    filter: blur(5px);
+    border-radius: 17px;
+}
+
+.img-like {
+
+    height: 500px;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 43px;
+    padding-bottom: 20px;
+}
+
+h1 {
+    color: black;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.conoz {
+    font-size: 45px;
+}
+
+.bloque-gen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: black;
+    padding: 10px 20px;
+}
+
+.text-izq {
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.texto-p-izq {
+    text-align: center;
+    padding: 15px;
+    border: 1.5px solid #000;
+}
+
+.bloque-izq {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background-color: rgb(111, 213, 238);
+    padding: 3px 10px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.bloque-enmedio {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.bloque-dch {
+    display: flex;
+    color: black;
+    padding-left: 10px;
+    background-color: rgb(111, 213, 238);
+    padding: 3px 10px;
+    border-radius: 20px 20px 20px 20px;
+
+}
+
+.tit-proyect {
+    font-size: 30px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.txt-dch-1 {
+    flex-direction: column;
+    margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.img-proyecto {
+    width: 500px;
+    height: auto;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-left: 50px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 20px
+}
+
+.pt-dch-2 {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.text-foot-dir {
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-foot-cop {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imagen-boton {
+    display: flex;
+    align-items: center;
+}
+
+.mainButton {
+    width: 30%;
+    border-radius: 10px;
+    background: rgb(200, 200, 200);
+    padding: 1%;
+    margin-left: 5%;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainButton button {
+    font-size: medium;
+    background: rgb(200, 0, 120);
+    border: none;
+    font-weight: bold;
+    padding: 2%;
+    border-radius: inherit;
+}
