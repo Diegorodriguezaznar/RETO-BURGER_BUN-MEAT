@@ -1,0 +1,210 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.menus {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    background-image: url('../IMG/Menus.jpg');
+    background-size: cover;
+    border-radius: 10px;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 950px;
+}
+
+.menus .texto-caja {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 210px;
+    margin-left: 700px;
+
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999; 
+    width: 200px;
+    height: auto;
+}
+
+.floating-button img {
+    width: 100px;
+    height: auto;
+    border-radius: 100px;
+}
+
+
+.apartado-menus {
+    /*background-image: url('white-2484120_1920.png');*/
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.apartado-menus h2 {
+    font-size: 100px;
+    text-align: center;
+    color: rgb(138, 22, 22);
+    margin-bottom: 180px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.menus .texto-caja h2 {
+    font-size: 145px;
+    margin-right: 200px;
+    color: aliceblue;
+    margin-bottom: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.menu-container-1 {
+    display: flex;
+    margin-top: 80px;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 22px;
+}
+
+.menu-container-2 {
+    display: flex;
+    margin-top: 80px;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 22px;
+}
+
+.menu-container-3 {
+    display: flex;
+    margin-top: 80px;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 22px;
+}
+
+.menu-container-4 {
+    display: flex;
+    margin-top: 80px;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 22px;
+}
+
+.menu-1,
+.menu-2,
+.menu-3,
+.menu-4,
+.menu-5,
+.menu-6,
+.menu-7,
+.menu-8,
+.menu-9 {
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    border: 5px solid rgb(184, 31, 31);
+    border-radius: 1px;
+    background-image: url('../IMG/white-2484120_1920.png');
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.menu-13 {
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    color: white;
+    background-color: rgb(137, 96, 212);
+    border: 3px solid rgb(86, 11, 226);
+    border-radius: 1px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.menu-14 {
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    background-color: rgb(55, 139, 52);
+    border: 3px solid rgb(0, 73, 22);
+    border-radius: 1px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.menu-1:hover,
+.menu-2:hover,
+.menu-3:hover,
+.menu-4:hover,
+.menu-5:hover,
+.menu-6:hover,
+.menu-7:hover,
+.menu-8:hover,
+.menu-9:hover,
+.menu-10:hover {
+    transform: scale(1.04);
+    background-image: url("../IMG/gris.PNG");
+    transition: background-image 0.9s ease;
+}
+
+
+.menu-13:hover {
+    transform: scale(1.04);
+    background-color: #cf9cff;
+    transition: background-color 0.9s ease;
+}
+
+.menu-14:hover {
+    transform: scale(1.04);
+    background-color: #98b391;
+    transition: background-color 0.9s ease;
+}
+
+
+.menu-container-1 img {
+    width: 260px;
+    height: 220px;
+    padding-top: 10px;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.menu-container-2 img {
+    width: 260px;
+    height: 220px;
+    padding-top: 10px;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.menu-container-3 img {
+    width: 260px;
+    height: 220px;
+    padding-top: 10px;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.menu-container-4 img {
+    width: 260px;
+    height: 220px;
+    padding-top: 10px;
+    align-items: center;
+    border-radius: 50px;
+}
