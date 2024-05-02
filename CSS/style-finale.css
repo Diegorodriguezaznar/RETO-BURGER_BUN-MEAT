@@ -81,3 +81,32 @@ footer {
     width: auto;
 }
 
+.menus-container {
+    display: flex;
+    margin-top: 80px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu-item-destacado1 , .menu-item-destacado2 , .menu-item-destacado3 , .menu-item-destacado4{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 100px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.menu-item-destacado1:hover , .menu-item-destacado2:hover ,.menu-item-destacado3:hover , .menu-item-destacado4:hover {
+    transform: scale(1.10);
+}
+
+
+.line {
+    border: none;
+    border-top: 3px solid black;
+    width: 60%;
+    margin: 0 auto;
+}
