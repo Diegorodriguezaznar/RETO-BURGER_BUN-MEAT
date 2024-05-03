@@ -4,12 +4,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* Esto asegura que el cuerpo tenga al menos el tamaño completo de la ventana */
+    background-image: url(/IMG/fondo_curvado.jpg);
 }
 
 .contenedor {
     flex: 1;
-    /* Esto hace que el contenedor principal ocupe todo el espacio disponible */
 }
 
 header {
@@ -118,34 +117,35 @@ h1 {
 }
 
 .texto-p-izq {
-    text-align: center;
+    text-align: left;
     padding: 15px;
-    border: 1.5px solid #000;
+    background-color: aliceblue;
+    border: rgb #adadad 8px outset;
+
 }
 
 .bloque-izq {
     display: flex;
     flex-direction: column;
+    border: rgb(185, 68, 0) 7px solid;
     color: black;
-    background-color: rgb(111, 213, 238);
+    background-image: url(/IMG/Corcho.jpg);
     padding: 3px 10px;
     border-radius: 20px 20px 20px 20px;
-}
-
-.bloque-enmedio {
-    display: flex;
-    flex-direction: column;
-    color: white;
+    margin-right: 20px;
+    
 }
 
 .bloque-dch {
     display: flex;
     color: black;
     padding-left: 10px;
-    background-color: rgb(111, 213, 238);
+    background-image: url(/IMG/Corcho.jpg);
     padding: 3px 10px;
     border-radius: 20px 20px 20px 20px;
-
+    margin-left: 20px;
+    border: rgb #4b1500  15px solid;
+      
 }
 
 .tit-proyect {
@@ -192,10 +192,6 @@ h2 {
     margin-bottom: 1rem;
 }
 
-p {
-    margin-bottom: 1rem;
-}
-
 .text-foot-dir {
     margin-top: 100px;
     justify-content: center;
@@ -216,9 +212,10 @@ p {
 
 .mainButton {
     width: 30%;
-    border-radius: 10px;
-    background: rgb(200, 200, 200);
+    background-image: url(/IMG/post-it.png);
+    background-size: 1px;
     padding: 1%;
+    padding-top: 20px;
     margin-left: 5%;
     font-size: large;
     display: flex;
@@ -234,4 +231,22 @@ p {
     font-weight: bold;
     padding: 2%;
     border-radius: inherit;
+}
+
+p{
+padding :5px;
+margin-bottom: 1rem;
+text-size-adjust: 20xp;
+font-family:Arial, Helvetica, sans-serif;
+color: rgb(80, 80, 80);
+}
+
+
+.boton-text{
+    color: rgb(0, 66, 66);
+padding-left: 10px;
+padding-right: 10px;
+align-content: right;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 }
