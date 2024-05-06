@@ -1,252 +1,50 @@
 body {
-    margin: 0;
+    font-family: Arial, sans-serif;
+    margin-left: 5%;
+    margin-right: 5%;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-image: url(/IMG/fondo_curvado.jpg);
-}
-
-.contenedor {
-    flex: 1;
-}
-
-header {
-    width: 100%;
-}
-
-.sup_rojo {
-    background-color: red;
-    color: white;
-    text-align: right;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: larger;
-}
-
-.inf_negro {
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    padding-left: 30%;
-    padding-right: 30%;
-    border: rgb(255, 255, 255) 8px inset;
-
-}
-
-.bloques {
-    flex: 1;
-    /* Distribuye equitativamente el espacio disponible */
-    box-sizing: border-box;
-    align-items: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: medium;
-}
-
-.item-a {
-    grid-area: presidente;
-}
-
-.item-b {
-    grid-area: textohist;
-}
-
-
-.contenedorhistoria {
-    display: grid;
-    padding: 20px 80px 20px 80px;
-    grid-template-columns: 50% 50%;
-    grid-template-areas:
-        "presidente textohist "
-
-}
-
-.img-logo {
-    color: #fff;
-    width: 80px;
-
-}
-
-.img-logo:hover {
-    background-color: #ff4800;
-    filter: blur(5px);
-    border-radius: 17px;
-}
-
-.img-like {
-
-    height: 500px;
-    align-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 43px;
-    padding-bottom: 20px;
+    background-color: #f4f4f4;
 }
 
 h1 {
-    color: black;
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    text-align: center;
-}
-
-.conoz {
-    font-size: 45px;
-}
-
-.bloque-gen {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    color: black;
-    padding: 10px 20px;
-}
-
-.text-izq {
-    padding-left: 20px;
-    padding-right: 20px;
-
-}
-
-.texto-p-izq {
-    text-align: left;
-    padding: 15px;
-    background-color: aliceblue;
-    border: rgb #adadad 8px outset;
-
-}
-
-.bloque-izq {
-    display: flex;
-    flex-direction: column;
-    border: rgb(185, 68, 0) 7px solid;
-    color: black;
-    background-image: url(/IMG/Corcho.jpg);
-    padding: 3px 10px;
-    border-radius: 20px 20px 20px 20px;
-    margin-right: 20px;
-    
-}
-
-.bloque-dch {
-    display: flex;
-    color: black;
-    padding-left: 10px;
-    background-image: url(/IMG/Corcho.jpg);
-    padding: 3px 10px;
-    border-radius: 20px 20px 20px 20px;
-    margin-left: 20px;
-    border: rgb #4b1500  15px solid;
-      
-}
-
-.tit-proyect {
-    font-size: 30px;
-    text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
-
-}
-
-.txt-dch-1 {
-    flex-direction: column;
-    margin: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-}
-
-.img-proyecto {
-    width: 500px;
-    height: auto;
-    align-items: center;
-    margin-bottom: 1rem;
-    padding-left: 50px;
-    padding-right: 20px;
-    padding-top: 5px;
-    padding-bottom: 20px
-}
-
-.pt-dch-2 {
-    flex-direction: column;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    text-align: center;
-}
-
-
-
-h2 {
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-.text-foot-dir {
-    margin-top: 100px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.text-foot-cop {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.imagen-boton {
-    display: flex;
-    align-items: center;
-}
-
-.mainButton {
-    width: 30%;
-    background-image: url(/IMG/post-it.png);
-    background-size: 1px;
-    padding: 1%;
-    padding-top: 20px;
-    margin-left: 5%;
-    font-size: large;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.mainButton button {
-    font-size: medium;
-    background: rgb(200, 0, 120);
-    border: none;
+    color: whitesmoke;
+    font-size: 100px;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 10%;
     font-weight: bold;
-    padding: 2%;
-    border-radius: inherit;
 }
 
-p{
-padding :5px;
-margin-bottom: 1rem;
-text-size-adjust: 20xp;
-font-family:Arial, Helvetica, sans-serif;
-color: rgb(80, 80, 80);
+.encabezado {
+    background: url(/IMG/fondowho.jpg);
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    align-items: center;
 }
 
+.espaciadormarron {
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 100px;
+    background-color: burlywood;
+    align-content: space-between;
+}
 
-.boton-text{
-    color: rgb(0, 66, 66);
-padding-left: 10px;
-padding-right: 10px;
-align-content: right;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.espaciadormarron_derecha {
+    background-color: rgb(196, 194, 191);
+    margin: auto;
+    display :flex;
+    align-items: left;
+}
 
+.espaciadormarron_izquierda {
+    margin: auto;
+    background-color: rgb(53, 36, 14);
+    display :flex;
+    align-items: left;
 }
