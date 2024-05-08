@@ -1,10 +1,12 @@
+/*ESTILOS PARA EL CUERPO DE LA PAGINA*/
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
 }
 
+/*ESTILOS PARA LA PRIMERA SECCION (se compone de una imagen que ocupa casi todo con la palabra Menus dentro)*/
 .menus {
     display: flex;
     align-items: center;
@@ -26,11 +28,12 @@ body {
 
 }
 
+/*ESTILOS PARA EL BOTON CON NUESTRO LOGO QUE SE USA PARA CAMBIAR DE TIPO DE PRODUCTO*/
 .floating-button {
     position: fixed;
-    bottom: 20px;
+    bottom: 30px;
     left: 20px;
-    z-index: 9999; 
+    z-index: 9999;
     width: 200px;
     height: auto;
 }
@@ -39,25 +42,66 @@ body {
     width: 100px;
     height: auto;
     border-radius: 100px;
+    position: relative;
+}
+
+/*ESTILOS DEL MINI MENU DEL BOTON*/
+.mini-menu {
+    width: 110px;
+    height: 300px;
+    position: absolute;
+    margin-top: -135px;
+    right: -20;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border-color: #f00;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+}
+
+.mini-menu a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+}
+
+.mini-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+.floating-button:hover {
+    transform: scale(1.10);
+    transition: all 0.7s ease;
 }
 
 
-.apartado-menus {
-    /*background-image: url('white-2484120_1920.png');*/
+/*ESTILOS DE LA SECCION DONDE ESTAN LOS MENUS ALMACENADOS */
+.apartado-menus  {
     background-color: #ffffff;
-    padding: 50px 20px;
+    margin-left: 300px;
+    margin-right: 450px;
     text-align: center;
+    display: grid;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    grid-gap: 50px;
 }
 
-.apartado-menus h2 {
+.menus-texto h2 {
     font-size: 100px;
     text-align: center;
     color: rgb(138, 22, 22);
     margin-bottom: 180px;
+    margin-top: 70px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 
+/*ESTILOS DE LA CAJA DE CADA MENU*/
 .menus .texto-caja h2 {
     font-size: 145px;
     margin-right: 200px;
@@ -66,52 +110,8 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-
-.menu-container-1 {
-    display: flex;
-    margin-top: 80px;
-    justify-content: center;
-    flex-wrap: wrap;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 22px;
-}
-
-.menu-container-2 {
-    display: flex;
-    margin-top: 80px;
-    justify-content: center;
-    flex-wrap: wrap;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 22px;
-}
-
-.menu-container-3 {
-    display: flex;
-    margin-top: 80px;
-    justify-content: center;
-    flex-wrap: wrap;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 22px;
-}
-
-.menu-container-4 {
-    display: flex;
-    margin-top: 80px;
-    justify-content: center;
-    flex-wrap: wrap;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 22px;
-}
-
-.menu-1,
-.menu-2,
-.menu-3,
-.menu-4,
-.menu-5,
-.menu-6,
-.menu-7,
-.menu-8,
-.menu-9 {
+/*ESTILOS DE LOS MENUS*/
+.menu-1{
     width: 300px;
     height: 350px;
     margin: 20px;
@@ -122,122 +122,52 @@ body {
 
 }
 
-.menu-13 {
-    width: 300px;
-    height: 350px;
-    margin: 20px;
-    color: white;
-    background-color: rgb(137, 96, 212);
-    border: 3px solid rgb(86, 11, 226);
-    border-radius: 1px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
+.menu-img{
+    width: 80%;
+    height: 60%;
+    margin-top: 10px;
+    border: 3px solid rgb(116, 10, 10);
 }
 
-.menu-14 {
-    width: 300px;
-    height: 350px;
-    margin: 20px;
-    background-color: rgb(55, 139, 52);
-    border: 3px solid rgb(0, 73, 22);
-    border-radius: 1px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
-}
-
-/*---------------MENU-1-------------------*/
-.menu-1 {
-    position: relative;
-}
 
 .menu-1 .precio {
-    position: absolute;
-    bottom: 30px;
+    margin-top: 7%;
     left: 40px;
     font-size: 30px;
     color: #000;
 }
 
+/*EL BOTON DE COMPRA DE CADA PRODUCTOO*/
 .menu-1 .comprar-btn {
-    position: absolute;
-    bottom: 30px;
+    margin-top: 5%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     right: 30px;
-    size: 19px;
+    size: 25px;
     padding: 10px 20px;
     background-color: #f00;
     color: #fff;
     border-radius: 30px;
     border: none;
     cursor: pointer;
+    opacity: 0; /* Oculta el botón inicialmente */
+    transition: opacity 0.3s ease;
 }
 
 
 
-
-.menu-1:hover,
-.menu-2:hover,
-.menu-3:hover,
-.menu-4:hover,
-.menu-5:hover,
-.menu-6:hover,
-.menu-7:hover,
-.menu-8:hover,
-.menu-9:hover,
-.menu-10:hover {
+.menu-1:hover {
     transform: scale(1.04);
     background-image: url("../IMG/gris.PNG");
     transition: background-image 0.9s ease;
+
 }
 
-
-.menu-13:hover {
-    transform: scale(1.04);
-    background-color: #cf9cff;
-    transition: background-color 0.9s ease;
+.menu-1:hover .comprar-btn {
+    opacity: 1;
 }
 
-.menu-14:hover {
-    transform: scale(1.04);
-    background-color: #98b391;
-    transition: background-color 0.9s ease;
-}
-
-
-.menu-container-1 img {
-    width: 260px;
-    height: 220px;
-    padding-top: 10px;
-    align-items: center;
-    border-radius: 50px;
-}
-
-.menu-container-2 img {
-    width: 260px;
-    height: 220px;
-    padding-top: 10px;
-    align-items: center;
-    border-radius: 50px;
-}
-
-.menu-container-3 img {
-    width: 260px;
-    height: 220px;
-    padding-top: 10px;
-    align-items: center;
-    border-radius: 50px;
-}
-
-.menu-container-4 img {
-    width: 260px;
-    height: 220px;
-    padding-top: 10px;
-    align-items: center;
-    border-radius: 50px;
-}
-
-
+/**/
 .ventana-emergente {
     display: none;
     position: fixed;
@@ -245,9 +175,12 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    z-index: 9999; /* Asegura que la ventana emergente esté por encima de todo */
-    overflow: auto; /* Permite desplazarse si el contenido es demasiado grande */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
+    z-index: 9999;
+    /* Asegura que la ventana emergente esté por encima de todo */
+    overflow: auto;
+    /* Permite desplazarse si el contenido es demasiado grande */
 }
 
 .contenido-ventana {
@@ -276,7 +209,68 @@ body {
 .imagenMenu {
     display: block;
     margin: 10px auto;
-    max-width: 90%;
+    max-width: 80%;
     max-height: 300px;
     border-radius: 10px;
+}
+
+
+
+
+
+
+/* Agrega este estilo al final de tu archivo CSS */
+.carrito {
+    position: fixed;
+    top: 50px; /* Ajusta según sea necesario */
+    right: 20px; /* Ajusta según sea necesario */
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 310px; /* Ajusta según sea necesario */
+    overflow-y: auto;
+    z-index: 1000;
+    color: #333;
+}
+
+.carrito h3 {
+    margin-top: 0;
+}
+
+#lista-productos {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#lista-productos li {
+    margin-bottom: 5px;
+}
+
+#comprar-todos-btn {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#comprar-todos-btn:hover {
+    background-color: #d00;
+}
+
+.carrito img{
+    height: 20px;
+    width: 20px;
+}
+
+.precio-total{
+    position: absolute;
+
 }
