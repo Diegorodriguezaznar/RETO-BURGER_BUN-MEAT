@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaja Con Nosotros - Hamburguesas XYZ</title>
+    <link rel="stylesheet" href="/CSS/reset.css">
+    <link rel="stylesheet" href="/CSS/TrabajaConNosotros.css">
+</head>
+
+<body>
+
+    <section class="empleado-mes">
+        <div class="image-box">
+            <div class="inner-box">
+                <div class="image">
+
+                    <img src="/IMG/EmpleadodelMes-1.PNG" alt="Imagen de la empresa">
+                    <p>NombreEmpleadoBaseDeDatos</p>
+                </div>
+            </div>
+        </div>
+        <div class="description-box">
+            <div class="description">
+                <h2>JOIN US</h2>
+                <p>
+                    "We are looking for individuals passionate about food and customer service to join our team in the
+                    kitchen area. If you love working in a dynamic and fun environment, apply today!"
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="apartado-historia">
+        <div class>
+            <h2 class="aos-init aos-animate">History of the company</h2>
+            <p class="aos-init aos-animate">
+                In the heart of a vibrant city, "Bun Meat" emerged as a cherished destination for burger aficionados.
+                Founded by Chef Johnson, it swiftly captivated locals with its tantalizing menu. Succulent patties,
+                fresh fixings, and artisanal buns defined its offerings. Families, friends, and wanderers alike
+                converged upon its inviting ambiance. Despite hurdles, "Bun Meat" persevered, fueled by a blend of
+                passion and community backing. Today, it stands as an emblem of resilience and gastronomic delight. With
+                each savory bite and delighted patron, its legend expands. "Bun Meat" remains an adored enclave, where
+                culinary craftsmanship and conviviality harmonize, epitomizing the essence of burger bliss.</p>
+            <img src="/IMG/Hamburguesa1.PNG" alt="Descripción de la imagen">
+        </div>
+    </section>
+    <div class ="formulario">
+        <form action="/my-handling-form-page" method="post" enctype="multipart/form-data">
+            <ul>
+                <li>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="user_name" required />
+                </li>
+                <li>
+                    <label for="mail">Email:</label>
+                    <input type="email" id="mail" name="user_mail" required />
+                </li>
+                <li>
+                    <label for="phone">Telephone:</label>
+                    <input type="tel" id="phone" name="user_phone" required />
+                </li>
+                <li>
+                    <label for="dni">DNI:</label>
+                    <input type="text" id="dni" name="user_dni" pattern="[0-9]{8}[A-Z]{1}" title="Introduce un DNI válido" required />
+                </li>
+                <li>
+                    <label for="files">Import Files:</label>
+                    <input type="file" id="files" name="user_files" multiple />
+                </li>
+                <li>
+                    <input type="submit" value="Send" />
+                </li>
+            </ul>
+        </form>
+        
+    </div>
+</body>
+
+</html>

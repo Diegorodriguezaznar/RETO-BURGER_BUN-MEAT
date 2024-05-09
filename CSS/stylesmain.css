@@ -74,8 +74,11 @@ header {
 }
 
 footer {
-    background-color: #a7a7a7;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #8b0606;
+    padding: 1rem;
+    color: #fff;
 }
