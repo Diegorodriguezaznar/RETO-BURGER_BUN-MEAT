@@ -86,7 +86,7 @@ body {
     margin-right: 450px;
     text-align: center;
     display: grid;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas */
     grid-gap: 50px;
 }
@@ -97,7 +97,7 @@ body {
     color: rgb(138, 22, 22);
     margin-bottom: 180px;
     margin-top: 70px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
@@ -122,7 +122,6 @@ body {
 
 }
 
-
 .menu-img{
     width: 80%;
     height: 60%;
@@ -132,7 +131,7 @@ body {
 
 
 .menu-1 .precio {
-    margin-top: 7%;
+    margin-top: 4%;
     left: 40px;
     font-size: 30px;
     color: #000;
@@ -140,7 +139,7 @@ body {
 
 /*EL BOTON DE COMPRA DE CADA PRODUCTOO*/
 .menu-1 .comprar-btn {
-    margin-top: 5%;
+    margin-top: 3%;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     right: 30px;
     size: 25px;
@@ -155,7 +154,6 @@ body {
 }
 
 
-
 .menu-1:hover {
     transform: scale(1.04);
     background-image: url("../IMG/gris.PNG");
@@ -167,7 +165,7 @@ body {
     opacity: 1;
 }
 
-/**/
+/*ESTILOS PARA LAS VENTANAS QUE APARECEN AL CLICKAR EN LOS PRODUCTOS*/
 .ventana-emergente {
     display: none;
     position: fixed;
@@ -176,11 +174,8 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Fondo semitransparente */
     z-index: 9999;
-    /* Asegura que la ventana emergente esté por encima de todo */
     overflow: auto;
-    /* Permite desplazarse si el contenido es demasiado grande */
 }
 
 .contenido-ventana {
@@ -219,16 +214,16 @@ body {
 
 
 
-/* Agrega este estilo al final de tu archivo CSS */
+/*ESTILOS PARA EL CARRITO*/
 .carrito {
     position: fixed;
-    top: 50px; /* Ajusta según sea necesario */
-    right: 20px; /* Ajusta según sea necesario */
+    top: 50px;
+    right: 20px; 
     background-color: #fff;
     border: 2px solid #ccc;
     border-radius: 5px;
     padding: 10px;
-    width: 310px; /* Ajusta según sea necesario */
+    width: 310px;
     overflow-y: auto;
     z-index: 1000;
     color: #333;
