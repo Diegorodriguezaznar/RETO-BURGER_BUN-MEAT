@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.empleado-mes {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    margin: 20px 0;
+    background-image: url('/IMG/Fondo-1.PNG'); 
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    height: 950px;
+}
+
+.empleado-mes .image-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empleado-mes .inner-box {
+    background-color: rgb(111, 213, 238);
+    padding: 20px;
+    border-radius: 10px;    
+    border-color: rgb(255, 255, 255);
+}
+
+.empleado-mes .image {
+    padding: 20px;
+    border-radius: 3px;
+}
+
+.empleado-mes .image img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.empleado-mes .image p {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.empleado-mes .description-box {
+    flex: 1;
+}
+
+.empleado-mes .description {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 210px;
+}
+
+.empleado-mes .description h2 {
+    font-size: 35px;
+    margin-right: 200px;
+    color: aliceblue;
+    margin-bottom: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.empleado-mes .description p {
+    font-size: 16px;
+    margin-right: 200px;
+    color: azure;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.apartado-historia {
+    background-color: #ffffff;
+    padding: 50px 20px; 
+    text-align: center;
+}
+
+.apartado-historia h2 {
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.apartado-historia p {
+    font-size: 18px;
+    margin-left: 500px;
+    margin-right: 500px;
+    line-height: 1.5;
+    color: #666666;
+    
+}
+
+.apartado-historia img {
+    margin-top: 7px; 
+    max-width: 100%;
+    height: auto;
+    align-content: center;
+}
+.formulario{
+padding-bottom: 5%;
+margin: 5%;
+
+
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #af4c4c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #a04545;
+}
