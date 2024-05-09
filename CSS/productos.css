@@ -11,13 +11,13 @@ body {
     display: flex;
     align-items: center;
     margin: 20px 0;
-    background-image: url('../IMG/Menus.jpg');
+    background-image: url('../IMG/HAMBURGUESA_LOGO.PNG');
     background-size: cover;
     border-radius: 10px;
     align-items: center;
     overflow: hidden;
     width: 100%;
-    height: 950px;
+    height: 550px;
 }
 
 .menus .texto-caja {
@@ -27,6 +27,114 @@ body {
     margin-left: 700px;
 
 }
+
+/*ESTILOS PARA LA PRIMERA SECCION (se compone de una imagen que ocupa casi todo con la palabra Menus dentro)*/
+.guarniciones {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    background-image: url('../IMG/PATATAS_LOGO.PNG');
+    background-size: cover;
+    border-radius: 10px;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 550px;
+}
+
+.guarniciones .texto-caja {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 210px;
+    margin-left: 700px;
+
+}
+
+.guarnicion-texto h2 {
+    font-size: 100px;
+    text-align: center;
+    color: rgb(224, 177, 21);
+    margin-bottom: 180px;
+    margin-top: 70px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/*ESTILOS DE LA CAJA DE CADA MENU*/
+.guarniciones .texto-caja h2 {
+    font-size: 145px;
+    margin-right: 200px;
+    color: aliceblue;
+    margin-bottom: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.apartado-guarniciones  {
+    background-color: #ffffff;
+    margin-left: 300px;
+    margin-right: 450px;
+    text-align: center;
+    display: grid;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    grid-gap: 50px;
+}
+
+/*ESTILOS PARA LA SECCION POSTRES (se compone de una imagen que ocupa casi todo con la palabra Menus dentro)*/
+.postres {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    background-image: url('../IMG/POSTRES_LOGO.PNG');
+    background-size: cover;
+    border-radius: 10px;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 550px;
+}
+
+.postres .texto-caja {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 210px;
+    margin-left: 700px;
+
+}
+
+.postres-texto h2 {
+    font-size: 100px;
+    text-align: center;
+    color: rgb(21, 200, 224);
+    margin-bottom: 180px;
+    margin-top: 70px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/*ESTILOS DE LA CAJA DE CADA POSTRE*/
+.postres .texto-caja h2 {
+    font-size: 145px;
+    margin-right: 200px;
+    color: aliceblue;
+    margin-bottom: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.apartado-postres  {
+    background-color: #ffffff;
+    margin-left: 300px;
+    margin-right: 450px;
+    text-align: center;
+    display: grid;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    grid-gap: 50px;
+}
+
+
 
 /*ESTILOS PARA EL BOTON CON NUESTRO LOGO QUE SE USA PARA CAMBIAR DE TIPO DE PRODUCTO*/
 .floating-button {
@@ -145,7 +253,7 @@ body {
     right: 30px;
     size: 25px;
     padding: 10px 20px;
-    background-color: #f00;
+    background-color: rgb(206, 8, 8);
     color: #fff;
     border-radius: 30px;
     border: none;
@@ -153,14 +261,6 @@ body {
     opacity: 0; /* Oculta el botón inicialmente */
     transition: opacity 0.3s ease;
 }
-
-.menu-1 .p .q {
-    font-size: 20;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #f00;
-}
-
-
 
 .menu-1:hover {
     transform: scale(1.04);
@@ -170,6 +270,124 @@ body {
 }
 
 .menu-1:hover .comprar-btn {
+    opacity: 1;
+}
+
+
+/*ESTILOS DE LAS GUARNICIONES*/
+.guarnicion-1{
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+    border: 5px solid rgb(241, 162, 59);
+    border-radius: 1px;
+    background-image: url('../IMG/white-2484120_1920.png');
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.guarnicion-img{
+    width: 80%;
+    height: 60%;
+    margin-top: 10px;
+    border: 3px solid rgb(194, 104, 2);
+}
+
+
+.guarnicion-1 .precio {
+    margin-top: 4%;
+    left: 40px;
+    font-size: 30px;
+    color: #000;
+}
+
+/*EL BOTON DE COMPRA DE CADA PRODUCTO ----(GUARNICIONES)----*/
+.guarnicion-1 .comprar-btn {
+    margin-top: 3%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    right: 30px;
+    size: 25px;
+    padding: 10px 20px;
+    background-color: rgb(219, 168, 0);
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    opacity: 0; /* Oculta el botón inicialmente */
+    transition: opacity 0.3s ease;
+}
+
+
+.guarnicion-1:hover {
+    transform: scale(1.04);
+    background-image: url("../IMG/gris.PNG");
+    transition: background-image 0.9s ease;
+
+}
+
+.guarnicion-1:hover .comprar-btn {
+    opacity: 1;
+}
+
+
+
+/*ESTILOS DE LOS POSTRES*/
+.postre-1{
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+    border: 5px solid rgb(72, 199, 178);
+    border-radius: 1px;
+    background-image: url('../IMG/white-2484120_1920.png');
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.postre-img{
+    width: 80%;
+    height: 60%;
+    margin-top: 10px;
+    border: 3px solid rgb(85, 194, 194);
+}
+
+
+.postre-1 .precio {
+    margin-top: 4%;
+    left: 40px;
+    font-size: 30px;
+    color: #000;
+}
+
+/*EL BOTON DE COMPRA DE CADA PRODUCTO ----(POSTRES)----*/
+.postre-1 .comprar-btn {
+    margin-top: 3%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    right: 30px;
+    size: 25px;
+    padding: 10px 20px;
+    background-color: rgb(0, 204, 219);
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    opacity: 0; /* Oculta el botón inicialmente */
+    transition: opacity 0.3s ease;
+}
+
+
+
+
+
+.postre-1:hover {
+    transform: scale(1.04);
+    background-image: url("../IMG/gris.PNG");
+    transition: background-image 0.9s ease;
+
+}
+
+.postre-1:hover .comprar-btn {
     opacity: 1;
 }
 
@@ -255,7 +473,7 @@ body {
     display: block;
     width: 100%;
     padding: 5px;
-    background-color: #f00;
+    background-color: rgb(172, 11, 11);
     color: #fff;
     border: none;
     border-radius: 5px;

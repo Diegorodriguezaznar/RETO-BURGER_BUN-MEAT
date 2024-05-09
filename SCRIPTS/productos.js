@@ -12,7 +12,7 @@ function cerrarVentana() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const menus = document.querySelectorAll('.menu-1 img');
+    const menus = document.querySelectorAll('.menu-1 img, .guarnicion-1 img, .postre-1 img');
     const imagenesMenu = [
         '../IMG/Menu1.PNG', '../IMG/Menu1.PNG', '../IMG/Menu1.PNG',
         '../IMG/meatbacon.jpg', '../IMG/meatbacon.jpg', '../IMG/meatbacon.jpg',
@@ -88,7 +88,6 @@ function mostrarCarrito() {
     const precioTotalCarrito = Object.values(carrito).reduce((total, producto) => total + producto.precioTotal, 0);
 
     // Agrega el precio total al final del carrito
-    const precioTotalCarrito = Object.values(carrito).reduce((total, producto) => total + producto.precioTotal, 0);
 
     const nuevoPrecioTotalElemento = document.createElement('div');
     nuevoPrecioTotalElemento.textContent = `Total Price: ${precioTotalCarrito} $`;
@@ -98,14 +97,6 @@ function mostrarCarrito() {
 
 
 
-// Evento click para los botones de "Comprar"
-document.addEventListener('DOMContentLoaded', function() {
-    // Obtén todos los botones de "Comprar"
-    const botonesComprar = document.querySelectorAll('.comprar-btn');
-
-    // Agrega un evento de clic a cada botón de "Comprar"
-    botonesComprar.forEach(function(boton) {
-        boton.addEventListener('click', function() {
             // Encuentra los elementos hermanos del botón para obtener el título, el precio y la imagen del producto
 // Funcion click para los botones de "Comprar"
 document.addEventListener('DOMContentLoaded', function() {
@@ -116,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const contenedorProducto = boton.parentElement;
             const titulo = contenedorProducto.querySelector('p:nth-of-type(1)').innerText;
             const precio = parseFloat(contenedorProducto.querySelector('.precio').innerText.replace('$', ''));
-            const imagen = contenedorProducto.querySelector('.menu-img').src;
+            const imagen = contenedorProducto.querySelector('.menu-img, .guarnicion-img, .postre-img').src;
 
             // Agrega el producto al carrito
             agregarAlCarrito(titulo, precio, imagen);
