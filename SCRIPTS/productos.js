@@ -50,16 +50,7 @@ function agregarAlCarrito(titulo, precio, imagen) {
 }
 
 
-function mostrarCarrito() {
-    // Obtén el elemento del carrito
-    const carritoElemento = document.getElementById('carrito');
 
-    // Obtén la lista de productos en el carrito
-    const listaProductos = carritoElemento.querySelector('.lista-productos');
-
-    // Borra el contenido anterior del precio total
-    mostrarCarrito();
-}
 
 /*Funciones para calcular el precio y los productos*/
 function mostrarCarrito() {
@@ -97,7 +88,6 @@ function mostrarCarrito() {
 
 
 
-            // Encuentra los elementos hermanos del botón para obtener el título, el precio y la imagen del producto
 // Funcion click para los botones de "Comprar"
 document.addEventListener('DOMContentLoaded', function() {
     const botonesComprar = document.querySelectorAll('.comprar-btn');
@@ -114,19 +104,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-
-function mostrarPedidos() {
-    // Obtén el elemento de la lista de pedidos
-    const listaPedidos = document.getElementById('lista-pedidos');
-
-    // Borra el contenido anterior de la lista de pedidos
-    listaPedidos.innerHTML = '';
-
-    // Itera sobre los pedidos y crea elementos para mostrarlos
-    for (const [titulo, cantidad] of Object.entries(pedidos)) {
-        const pedidoElemento = document.createElement('li');
-        pedidoElemento.textContent = `${cantidad} - ${titulo}`;
-        listaPedidos.appendChild(pedidoElemento);
-    }
-}
