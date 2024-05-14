@@ -15,7 +15,7 @@ body {
 .info-text {
     flex: 1;
     padding: 30px;
-    background-color: #db3232;
+    background-color: #f0f0f0;
 
 }
 
@@ -23,7 +23,7 @@ body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding-top: 1%;
     padding-bottom: 1%;
-    color: #fff;
+    color: #ffffff;
 }
 
 
@@ -31,7 +31,7 @@ body {
     margin-top: 0;
     font-size: 100px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #fff;
+    color: #ffffff;
 }
 
 .mapa {
