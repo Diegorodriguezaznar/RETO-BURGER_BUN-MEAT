@@ -41,6 +41,10 @@ body {
 header {
     width: 100%;
 }
+header .pin-logo{
+    height: 30px;
+    width: 30px;
+}
 
 .cabecera_sup {
     background-color: rgb(255, 255, 255);
@@ -116,4 +120,27 @@ h2{
     align-items: center;
     justify-content: center;
     padding: 6px;
+}
+
+/*ESTILOS FOOTER*/
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #8b0606;
+    padding: 1rem;
+    color: #fff;
+}
+footer .x-logo{
+    height: 30px;
+    width: 30px;
+}
+footer .insta-logo{
+    height: 40px;
+    width: 40px;
+}
+footer .face-logo{
+    height: 40px;
+    width: 40px;
 }
