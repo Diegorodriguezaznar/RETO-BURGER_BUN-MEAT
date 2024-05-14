@@ -2,7 +2,7 @@
 window.onload = function () {
     // Variables
     const IMAGENES = [
-        '/IMG/mid-pollo.jpg',
+        '/IMG/ArosCebolla.jpg',
         '/IMG/Menu-gen.png',
         '/IMG/TartaQueso.jpg'
     ];
