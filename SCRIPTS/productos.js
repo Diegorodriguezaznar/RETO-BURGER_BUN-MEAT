@@ -83,14 +83,25 @@ function mostrarCarrito() {
     const nuevoPrecioTotalElemento = document.createElement('div');
     nuevoPrecioTotalElemento.textContent = `Total Price: ${precioTotalCarrito} $`;
     nuevoPrecioTotalElemento.classList.add('precio-total');
-    carritoElemento.appendChild(nuevoPrecioTotalElemento);
+    carritoElemento.children[1].appendChild(nuevoPrecioTotalElemento);
 }
 
 
 
+let carritoHeaderButton // es un div con función de botón
+let carritoBodyDiv
+
 // Funcion click para los botones de "Comprar"
 document.addEventListener('DOMContentLoaded', function() {
     const botonesComprar = document.querySelectorAll('.comprar-btn');
+    carritoHeaderButton = document.getElementsByClassName("carrito-header")[0]
+    carritoBodyDiv = document.getElementsByClassName("carrito-body")[0]
+
+    carritoHeaderButton.addEventListener("click", () => {
+        if (carritoBodyDiv.style.display != "none") {
+            carritoBodyDiv.style.display = "none"
+        } else {carritoBodyDiv.style.display = "block"}
+    })
 
     botonesComprar.forEach(function(boton) {
         boton.addEventListener('click', function() {
