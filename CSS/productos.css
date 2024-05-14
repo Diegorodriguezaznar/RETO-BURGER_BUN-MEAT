@@ -498,6 +498,11 @@ header .pin-logo{
     color: #000;
 }
 
+.tituloMenu{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
 .imagenMenu {
     display: block;
     margin: 10px auto;
@@ -507,6 +512,13 @@ header .pin-logo{
 }
 
 
+.Boton-añadir-productos {
+    background-color: #f00;
+    color: #fff;
+    border-color: #f0f0f0;
+    margin-left: 70%;
+
+}
 
 
 
