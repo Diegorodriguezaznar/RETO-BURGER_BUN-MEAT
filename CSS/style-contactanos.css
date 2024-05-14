@@ -15,7 +15,7 @@ body {
 .info-text {
     flex: 1;
     padding: 30px;
-    background-color: #e22e2e;
+    background-color: #f0f0f0;
 
 }
 
@@ -56,4 +56,79 @@ body {
     .contact-info, .map {
         width: 100%;
     }
+}
+
+/*ESTILOS DEL HEADER*/
+.logo-img {
+    width: 100px;
+    height: 80px;
+    padding-left: 50px
+}
+
+
+.botones {
+    display: flex;
+    align-items: center;
+}
+
+.boton {
+    margin-right: 20px;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    color: black; 
+    font-family: Arial, sans-serif; 
+    cursor: pointer;
+    border-radius: 5px;
+    border: black 5px double; 
+}
+
+.boton p {
+    margin: 0;
+}
+header {
+    width: 100%;
+}
+header .pin-logo{
+    height: 30px;
+    width: 30px;
+}
+
+.cabecera_sup {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+}
+
+.cabecera_roja {
+    background-color: rgb(117, 0, 0);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+
+.bloques {
+    flex: 1;
+    box-sizing: border-box;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: medium;
+}
+
+.enlace-blanco {
+    color: white;
+}
+
+.enlace-correo {
+    color: rgb(0, 217, 255);
+    
 }
