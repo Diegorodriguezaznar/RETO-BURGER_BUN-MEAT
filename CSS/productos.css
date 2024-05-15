@@ -536,6 +536,8 @@ header .pin-logo{
     overflow-y: auto;
     z-index: 1000;
     color: #333;
+    max-height: 500px;
+    overflow-y: auto;
 }
 
 .carrito h3 {
