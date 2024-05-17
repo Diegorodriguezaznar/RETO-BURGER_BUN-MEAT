@@ -15,6 +15,36 @@ body {
     height: 40%;
 }
 
+.place-order-options {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 13.2%;
+    left: 46%;
+    width: 8%;
+}
+
+.place-order-options a {
+    font-size: large;
+    background: rgb(241, 241, 239);
+    color: maroon;
+    border: solid maroon;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 4%;
+}
+
+.place-order-options button {
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+    border: inherit;
+    width: inherit;
+    cursor: inherit;
+}
+
 h1 {
     color: #fff; 
     font-size: 85px;
