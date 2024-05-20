@@ -121,8 +121,8 @@ body {
 
 .apartado-historia p {
     font-size: 18px;
-    margin-left: 500px;
-    margin-right: 500px;
+    margin-left: 20%;
+    margin-right: 20%;
     line-height: 1.5;
     color: #666666;
     
@@ -275,4 +275,148 @@ footer .insta-logo{
 footer .face-logo{
     height: 40px;
     width: 40px;
+}
+
+/* Estilos para pantallas de hasta 768px de ancho (móviles) */
+@media (max-width: 768px) {
+    /*HEADER*/
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo-img {
+        width: 80px;
+    }
+
+    .cabecera_sup {
+        flex-direction: row;
+        font-size: medium;
+        padding: 10px;
+    }
+
+    .cabecera_roja {
+        flex-direction: column;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 5%;
+    }
+
+    .bloques {
+        padding-bottom: 5%;
+    }
+
+    .botones {
+        margin-left: 0%;
+        align-items: center;
+    }
+
+    .boton {
+        margin-right: 10%;
+        margin-bottom: 10px;
+    }
+
+    .place-order-options {
+        position: static; 
+        width: auto; 
+        padding: 20px; 
+
+    }
+
+    .place-order-options a {
+        font-size: 0.9rem; 
+        padding: 8px; 
+    }
+    /*FIN HEADER*/
+
+    .carousel {
+        flex-direction: column;
+    }
+
+    .carousel img {
+        width: 100%;
+    }
+
+    .publicidad {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .cajas {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .subcaja {
+        padding: 15px;
+    }
+
+    .subcaja h1 {
+        font-size: 3ch;
+    }
+
+    .subcaja p {
+        font-size: 16px;
+    }
+    
+    .publicidad img,
+    #flecha {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Estilos para pantallas de hasta 480px de ancho (móviles pequeños) */
+@media (max-width: 480px) {
+    .logo-img {
+        width: 80px;
+    }
+
+    .boton {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cabecera_sup {
+        font-size: small;
+    }
+
+    .cabecera_roja {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .menu-item-destacado1,
+    .menu-item-destacado2,
+    .menu-item-destacado3,
+    .menu-item-destacado4 {
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+    }
+
+    #imagen {
+        height: 300px;
+    }
+
+    .publicidad img,
+    #flecha {
+        width: 100%;
+        height: auto;
+    }
+
+    .apartado-historia p{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .empleado-mes .image-box {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .empleado-mes .description-box {
+        margin-top: 80%;
+    }
+    
 }

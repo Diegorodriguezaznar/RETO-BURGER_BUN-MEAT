@@ -135,6 +135,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	/** Método para hacer la petición a la API y obtener el json de resultados */
 	const getListPokemon = async (id) => {
 		const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+        /*"http://localhost:8080/reto/Controller?action=productos.hamburguesa"*/
 
 		const result = await fetch(url);
 		const resultJson = await result.json();

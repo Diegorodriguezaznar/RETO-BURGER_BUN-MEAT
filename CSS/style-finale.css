@@ -1,10 +1,9 @@
 /*ESTILOS DEL HEADER*/
 .logo-img {
     width: 100px;
-    height: 80px;
-    padding-left: 50px
+    height: auto;
+    padding-left: 50px;
 }
-
 
 .botones {
     display: flex;
@@ -35,44 +34,13 @@ header .pin-logo {
     width: 30px;
 }
 
-/* TESTS */
-.place-order-options {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 13.2%;
-    left: 46%;
-    width: 8%;
-}
-
-.place-order-options a {
-    font-size: large;
-    background: rgb(241, 241, 239);
-    color: maroon;
-    border: solid maroon;
-    width: 100%;
-    cursor: pointer;
-    border-radius: 4%;
-}
-
-.place-order-options button {
-    font-size: inherit;
-    background: inherit;
-    color: inherit;
-    border: inherit;
-    width: inherit;
-    cursor: inherit;
-}
-
 .cabecera_sup {
     background-color: rgb(255, 255, 255);
-    color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    color: black;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: larger;
 }
@@ -84,14 +52,13 @@ header .pin-logo {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding-left: 30%;
-    padding-right: 30%;
+    padding: 10px 5%;
 }
-
 
 .bloques {
     flex: 1;
     box-sizing: border-box;
+    display: flex;
     align-items: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: medium;
@@ -101,8 +68,6 @@ header .pin-logo {
     color: white;
     text-decoration: none;
 }
-
-
 
 body {
     margin: 0;
@@ -114,46 +79,6 @@ body {
 
 .contenedor {
     flex: 1;
-}
-
-header {
-    width: 100%;
-}
-
-header .pin-logo {
-    height: 30px;
-    width: 30px;
-}
-
-.cabecera_sup {
-    background-color: rgb(255, 255, 255);
-    color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: larger;
-}
-
-.cabecera_roja {
-    background-color: rgb(117, 0, 0);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    text-align: center;
-    padding-left: 30%;
-    padding-right: 30%;
-}
-
-.bloques {
-    flex: 1;
-    box-sizing: border-box;
-    align-items: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: medium;
 }
 
 footer {
@@ -183,7 +108,6 @@ footer {
     border-radius: 100px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
 }
 
 .menu-item-destacado1:hover,
@@ -192,7 +116,6 @@ footer {
 .menu-item-destacado4:hover {
     transform: scale(1.10);
 }
-
 
 .line {
     border: none;
@@ -240,6 +163,13 @@ footer .face-logo {
     max-width: 800px;
     margin: 0 auto;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carousel img {
+    max-width: 100%;
+    height: auto;
 }
 
 #imagen {
@@ -257,14 +187,13 @@ footer .face-logo {
     align-content: center;
     padding-left: 20%;
     padding-right: 20%;
-
-
 }
 
 .cajas {
     align-content: center;
     justify-content: center;
     display: flex;
+    flex-wrap: wrap;
     height: 100%;
     margin: 10px;
     padding: 25px;
@@ -276,23 +205,18 @@ footer .face-logo {
     height: 100%;
     padding: 25px;
     border: 5px solid pink;
-
 }
-
-
 
 .subcaja h1 {
     padding-top: 13px;
     font-size: 4ch;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .subcaja p {
     padding-top: 14px;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .subcaja2 {
@@ -300,5 +224,178 @@ footer .face-logo {
     height: 50%;
     padding: 25px;
     border: 5px solid pink;
+}
 
+
+    .place-order-options {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 13.2%;
+        left: 46%;
+        width: 8%;
+    }
+
+    .place-order-options a {
+        font-size: 1rem; /* Ajustado a rem para mejor escalabilidad */
+        background: rgb(241, 241, 239);
+        color: maroon;
+        width: 100%;
+        cursor: pointer;
+        border-radius: 4px; /* Bordes redondeados */
+        margin: 5px 0; /* Espaciado entre botones */
+        text-align: center; /* Centra el texto dentro de los enlaces */
+        text-decoration: none; /* Quita la decoración de enlaces */
+        padding: 10px; /* Añade padding para hacer los botones más clicables */
+        transition: background-color 0.3s ease; /* Transición para mejor experiencia de usuario */
+    }
+    
+    .place-order-options a:hover {
+        background-color: rgb(210, 210, 210); /* Cambio de color al pasar el ratón */
+    }
+    
+    .place-order-options button {
+        font-size: inherit;
+        background: inherit;
+        color: inherit;
+        border: inherit;
+        width: 100%;
+        cursor: inherit;
+        padding: 0; /* Elimina el padding adicional */
+        text-align: inherit;
+        margin: 0; /* Elimina el margen adicional */
+    }
+
+
+
+
+/* Estilos para pantallas de hasta 768px de ancho (móviles) */
+@media (max-width: 768px) {
+    /*HEADER*/
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo-img {
+        width: 80px;
+    }
+
+    .cabecera_sup {
+        flex-direction: row;
+        font-size: medium;
+        padding: 10px;
+    }
+
+    .cabecera_roja {
+        flex-direction: column;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 5%;
+    }
+
+    .bloques {
+        padding-bottom: 5%;
+    }
+
+    .botones {
+        margin-left: 0%;
+        align-items: center;
+    }
+
+    .boton {
+        margin-right: 10%;
+        margin-bottom: 10px;
+    }
+
+    .place-order-options {
+        position: static; 
+        width: auto; 
+        padding: 20px; 
+
+    }
+
+    .place-order-options a {
+        font-size: 0.9rem; 
+        padding: 8px; 
+    }
+    /*FIN HEADER*/
+
+    .carousel {
+        flex-direction: column;
+    }
+
+    .carousel img {
+        width: 100%;
+    }
+
+    .publicidad {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .cajas {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .subcaja {
+        padding: 15px;
+    }
+
+    .subcaja h1 {
+        font-size: 3ch;
+    }
+
+    .subcaja p {
+        font-size: 16px;
+    }
+    
+    .publicidad img,
+    #flecha {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Estilos para pantallas de hasta 480px de ancho (móviles pequeños) */
+@media (max-width: 480px) {
+    .logo-img {
+        width: 80px;
+    }
+
+    .boton {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cabecera_sup {
+        font-size: small;
+    }
+
+    .cabecera_roja {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .menu-item-destacado1,
+    .menu-item-destacado2,
+    .menu-item-destacado3,
+    .menu-item-destacado4 {
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+    }
+
+    #imagen {
+        height: 300px;
+    }
+
+    .publicidad img,
+    #flecha {
+        width: 100%;
+        height: auto;
+    }
 }
