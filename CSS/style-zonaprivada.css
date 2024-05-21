@@ -1,0 +1,238 @@
+
+/*ESTILOS DEL HEADER*/
+.logo-img {
+    width: 100px;
+    height: 80px;
+    padding-left: 50px
+}
+
+
+.botones {
+    display: flex;
+    align-items: center;
+}
+
+.boton {
+    margin-right: 20px;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    color: black; 
+    font-family: Arial, sans-serif; 
+    cursor: pointer;
+    border-radius: 5px;
+    border: black 5px double; 
+}
+
+.boton p {
+    margin: 0;
+}
+header {
+    width: 100%;
+}
+header .pin-logo{
+    height: 30px;
+    width: 30px;
+}
+
+.cabecera_sup {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+}
+
+.cabecera_roja {
+    background-color: rgb(117, 0, 0);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+
+.bloques {
+    flex: 1;
+    box-sizing: border-box;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: medium;
+}
+
+.enlace-blanco {
+    color: white;
+}
+
+.enlace-correo {
+    color: rgb(0, 217, 255);
+    
+}
+
+
+/* Estilos para pantallas de hasta 768px de ancho (móviles) */
+@media (max-width: 768px) {
+    /*HEADER*/
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo-img {
+        width: 80px;
+    }
+
+    .cabecera_sup {
+        flex-direction: row;
+        font-size: medium;
+        padding: 10px;
+    }
+
+    .cabecera_roja {
+        flex-direction: column;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 5%;
+    }
+
+    .bloques {
+        padding-bottom: 5%;
+    }
+
+    .botones {
+        margin-left: 0%;
+        align-items: center;
+    }
+
+    .boton {
+        margin-right: 10%;
+        margin-bottom: 10px;
+    }
+
+    .place-order-options {
+        position: static; 
+        width: auto; 
+        padding: 20px; 
+
+    }
+
+    .place-order-options a {
+        font-size: 0.9rem; 
+        padding: 8px; 
+    }
+    /*FIN HEADER*/
+    .info-text h2  {
+        font-size: 50px;
+
+    }
+
+}
+/* Estilos para pantallas de hasta 480px de ancho (móviles pequeños) */
+@media (max-width: 480px) {
+    .logo-img {
+        width: 80px;
+    }
+
+    .boton {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cabecera_sup {
+        font-size: small;
+    }
+
+    .cabecera_roja {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .info-text h2  {
+        font-size: 50px;
+
+    }
+
+}
+
+.botones-tablas{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: maroon;
+    color: white;
+    height: 300px;
+    padding: 1% 0%;
+}
+
+.botones-tablas button{
+    width: 50%;
+    background: green;
+    color: inherit;
+    border-radius: 10px;
+    border: solid black;
+    padding: 1%;
+}
+
+.InicioUsuariosDiv{
+    background-color: white;
+    box-shadow: 1px 1px 20px 10px green;
+    width: 40%;
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-container h2 {
+    margin-bottom: 20px;
+}
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form-container button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
