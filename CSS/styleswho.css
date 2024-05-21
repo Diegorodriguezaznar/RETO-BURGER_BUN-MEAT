@@ -1,7 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    margin-left: 12%;
-    margin-right: 12%;
     padding: 0;
     background-color: #f4f4f4;
 }
@@ -13,6 +11,36 @@ body {
     background-position: center;
     padding: 100px 0;
     height: 40%;
+}
+
+.place-order-options {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 13.2%;
+    left: 46%;
+    width: 8%;
+}
+
+.place-order-options a {
+    font-size: large;
+    background: rgb(241, 241, 239);
+    color: maroon;
+    border: solid maroon;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 4%;
+}
+
+.place-order-options button {
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+    border: inherit;
+    width: inherit;
+    cursor: inherit;
 }
 
 h1 {
@@ -189,4 +217,97 @@ footer .insta-logo{
 footer .face-logo{
     height: 40px;
     width: 40px;
+}
+
+
+
+/* Estilos para pantallas de hasta 768px de ancho (móviles) */
+@media (max-width: 768px) {
+    /*HEADER*/
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo-img {
+        width: 80px;
+    }
+
+    .cabecera_sup {
+        flex-direction: row;
+        font-size: medium;
+        padding: 10px;
+    }
+
+    .cabecera_roja {
+        flex-direction: column;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 5%;
+    }
+
+    .bloques {
+        padding-bottom: 5%;
+    }
+
+    .botones {
+        margin-left: 0%;
+        align-items: center;
+    }
+
+    .boton {
+        margin-right: 10%;
+        margin-bottom: 10px;
+    }
+
+    .place-order-options {
+        position: static; 
+        width: auto; 
+        padding: 20px; 
+
+    }
+
+    .place-order-options a {
+        font-size: 0.9rem; 
+        padding: 8px; 
+    }
+    /*FIN HEADER*/
+    
+    
+
+}
+/* Estilos para pantallas de hasta 480px de ancho (móviles pequeños) */
+@media (max-width: 480px) {
+    .logo-img {
+        width: 80px;
+    }
+
+    .boton {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cabecera_sup {
+        font-size: small;
+    }
+
+    .cabecera_roja {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .espaciadorrojo_izquierda {
+        padding-right: 50%;
+    }
+    .espaciadorrojo_izquierda p {
+        font-size: 40px;
+        padding-right: 90%;
+    }
+    .espaciadorrojo_derecha {
+        padding-top: 60%;
+        padding-right: 80%;
+    }
+    
+
+
 }

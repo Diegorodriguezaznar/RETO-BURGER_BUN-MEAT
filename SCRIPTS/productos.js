@@ -115,3 +115,68 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+
+
+
+
+
+
+
+window.addEventListener('DOMContentLoaded', (event) => {
+
+	const fetchProducto = async () => {
+		for (let i = 1; i <= 30; i++) {
+			await getListPokemon(i);
+		}
+	}
+	
+	/** Método para hacer la petición a la API y obtener el json de resultados */
+	const getListPokemon = async (id) => {
+		const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+        /*"http://localhost:8080/reto/Controller?action=productos.hamburguesa"*/
+
+		const result = await fetch(url);
+		const resultJson = await result.json();
+		console.log(resultJson);
+		createProducto(resultJson);
+	}
+
+	/** Método para crear el HTML del Elemento Pokemon*/
+	const createProducto = (producto) => {
+		console.log('createProductoItem => ', producto);
+		const menu_list = document.getElementsByClassName('apartado-menus')[0];
+		const card = document.createElement('li');
+		card.classList.add('card');
+		const {sprites, name, id, types } = producto;
+		let CatProductos = getCategoriaProducto(types);
+
+		card.innerHTML = `
+            <div class="menu-1">
+                <img src="${sprites.front_default}" alt="menu1" class="menu-img">
+                <p>${name}</p>
+                <p class="precio">$10</p>
+                <div class="descripcion">slslslls kdkdk</div>
+                <button class="comprar-btn">Comprar</button>
+            </div>
+        
+    `;
+
+    menu_list.appendChild(card);
+
+	}
+
+	const getCategoriaProducto = (types) => {
+		let CatProductos = '';
+		types.forEach((element, index) => {
+			if (index === 0) { CatProductos = element.type.name; }
+			else {
+				CatProductos = CatProductos + `, ${element.type.name}`;
+			}
+		});
+		return CatProductos;
+	}
+
+	fetchProducto();
+});

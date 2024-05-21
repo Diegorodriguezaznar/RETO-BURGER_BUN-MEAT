@@ -13,6 +13,36 @@ body {
     padding-left: 50px
 }
 
+.place-order-options {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 13.2%;
+    left: 46%;
+    width: 8%;
+}
+
+.place-order-options a {
+    font-size: large;
+    background: rgb(241, 241, 239);
+    color: maroon;
+    border: solid maroon;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 4%;
+}
+
+.place-order-options button {
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+    border: inherit;
+    width: inherit;
+    cursor: inherit;
+}
+
 
 .botones {
     display: flex;
@@ -77,12 +107,13 @@ header .pin-logo{
     text-decoration: none; 
 }
 
+
 /*ESTILOS PARA LA PRIMERA SECCION (se compone de una imagen que ocupa casi todo con la palabra Menus dentro)*/
 .menus {
     display: flex;
     align-items: center;
     margin: 20px 0;
-    background-image: url('../IMG/HAMBURGUESA_LOGO.PNG');
+    background-image: url('../IMG/Imagen-Principal-Productos.jpg');
     background-size: cover;
     border-radius: 10px;
     align-items: center;
@@ -91,20 +122,38 @@ header .pin-logo{
     height: 550px;
 }
 
+.apartado-menus {
+    background-color: #ffffff;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    display: grid;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    padding: 0; /* Elimina el padding predeterminado */
+    list-style: none;
+    
+}
+
+.apartado-menus li {
+    margin: 0; /* Asegura que no haya márgenes adicionales en los elementos li */
+}
+
+
 .menus .texto-caja {
-    padding: 20px;
+    padding: 20px;  
     text-align: center;
     margin-bottom: 210px;
     margin-left: 700px;
 
 }
 
-/*ESTILOS PARA LA PRIMERA SECCION (se compone de una imagen que ocupa casi todo con la palabra Menus dentro)*/
+/*ESTILOS PARA LA PRIMERA SECCION (se compone de una imagen que ocupa casi todo con la palabra guarniciones dentro)*/
 .guarniciones {
     display: flex;
     align-items: center;
     margin: 20px 0;
-    background-image: url('../IMG/PATATAS_LOGO.PNG');
+    background-image: url('../IMG/Imagen-Pagina-Guarniciones.jpg');
     background-size: cover;
     border-radius: 10px;
     align-items: center;
@@ -124,7 +173,7 @@ header .pin-logo{
 .guarnicion-texto h2 {
     font-size: 100px;
     text-align: center;
-    color: rgb(224, 177, 21);
+    color: rgb(138, 22, 22);
     margin-bottom: 180px;
     margin-top: 70px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -141,23 +190,12 @@ header .pin-logo{
 }
 
 
-.apartado-guarniciones  {
-    background-color: #ffffff;
-    margin-left: 300px;
-    margin-right: 450px;
-    text-align: center;
-    display: grid;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
-    grid-gap: 50px;
-}
-
-/*ESTILOS PARA LA SECCION POSTRES (se compone de una imagen que ocupa casi todo con la palabra Menus dentro)*/
+/*ESTILOS PARA LA SECCION POSTRES (se compone de una imagen que ocupa casi todo con la palabra postres dentro)*/
 .postres {
     display: flex;
     align-items: center;
     margin: 20px 0;
-    background-image: url('../IMG/POSTRES_LOGO.PNG');
+    background-image: url('../IMG/Imagen-Pagina-Postres.jpg');
     background-size: cover;
     border-radius: 10px;
     align-items: center;
@@ -177,7 +215,7 @@ header .pin-logo{
 .postres-texto h2 {
     font-size: 100px;
     text-align: center;
-    color: rgb(21, 200, 224);
+    color: rgb(138, 22, 22);
     margin-bottom: 180px;
     margin-top: 70px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -193,17 +231,6 @@ header .pin-logo{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-
-.apartado-postres  {
-    background-color: #ffffff;
-    margin-left: 300px;
-    margin-right: 450px;
-    text-align: center;
-    display: grid;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
-    grid-gap: 50px;
-}
 
 
 
@@ -259,16 +286,6 @@ header .pin-logo{
 
 
 /*ESTILOS DE LA SECCION DONDE ESTAN LOS MENUS ALMACENADOS */
-.apartado-menus  {
-    background-color: #ffffff;
-    margin-left: 300px;
-    margin-right: 450px;
-    text-align: center;
-    display: grid;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
-    grid-gap: 50px;
-}
 
 .menus-texto h2 {
     font-size: 100px;
@@ -292,7 +309,7 @@ header .pin-logo{
 /*ESTILOS DE LOS MENUS*/
 .menu-1{
     width: 300px;
-    height: 350px;
+    height: 450px;
     margin: 20px;
     border: 5px solid rgb(184, 31, 31);
     border-radius: 1px;
@@ -304,7 +321,7 @@ header .pin-logo{
 
 .menu-img{
     width: 80%;
-    height: 60%;
+    height: 50%;
     margin-top: 10px;
     border: 3px solid rgb(116, 10, 10);
 }
@@ -316,6 +333,14 @@ header .pin-logo{
     font-size: 30px;
     color: #000;
 }
+
+.menu-1 .descripcion {
+    margin-top: 4%;
+    left: 40px;
+    font-size: 18px;
+    color: #000;
+}
+
 
 /*EL BOTON DE COMPRA DE CADA PRODUCTOO*/
 .menu-1 .comprar-btn {
@@ -346,179 +371,19 @@ header .pin-logo{
 
 
 /*ESTILOS DE LAS GUARNICIONES*/
-.guarnicion-1{
-    width: 300px;
-    height: 350px;
-    margin: 20px;
-    border: 5px solid rgb(241, 162, 59);
-    border-radius: 1px;
-    background-image: url('../IMG/white-2484120_1920.png');
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-}
-
-.guarnicion-img{
-    width: 80%;
-    height: 60%;
-    margin-top: 10px;
-    border: 3px solid rgb(194, 104, 2);
-}
-
-
-.guarnicion-1 .precio {
-    margin-top: 4%;
-    left: 40px;
-    font-size: 30px;
-    color: #000;
-}
 
 /*EL BOTON DE COMPRA DE CADA PRODUCTO ----(GUARNICIONES)----*/
-.guarnicion-1 .comprar-btn {
-    margin-top: 3%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    right: 30px;
-    size: 25px;
-    padding: 10px 20px;
-    background-color: rgb(219, 168, 0);
-    color: #fff;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    opacity: 0; /* Oculta el botón inicialmente */
-    transition: opacity 0.3s ease;
-}
-
-
-.guarnicion-1:hover {
-    transform: scale(1.04);
-    background-image: url("../IMG/gris.PNG");
-    transition: background-image 0.9s ease;
-
-}
-
-.guarnicion-1:hover .comprar-btn {
-    opacity: 1;
-}
 
 
 
 /*ESTILOS DE LOS POSTRES*/
-.postre-1{
-    width: 300px;
-    height: 350px;
-    margin: 20px;
-    border: 5px solid rgb(72, 199, 178);
-    border-radius: 1px;
-    background-image: url('../IMG/white-2484120_1920.png');
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-}
-
-.postre-img{
-    width: 80%;
-    height: 60%;
-    margin-top: 10px;
-    border: 3px solid rgb(85, 194, 194);
-}
-
-
-.postre-1 .precio {
-    margin-top: 4%;
-    left: 40px;
-    font-size: 30px;
-    color: #000;
-}
 
 /*EL BOTON DE COMPRA DE CADA PRODUCTO ----(POSTRES)----*/
-.postre-1 .comprar-btn {
-    margin-top: 3%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    right: 30px;
-    size: 25px;
-    padding: 10px 20px;
-    background-color: rgb(0, 204, 219);
-    color: #fff;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    opacity: 0; /* Oculta el botón inicialmente */
-    transition: opacity 0.3s ease;
-}
 
 
 
-
-
-.postre-1:hover {
-    transform: scale(1.04);
-    background-image: url("../IMG/gris.PNG");
-    transition: background-image 0.9s ease;
-
-}
-
-.postre-1:hover .comprar-btn {
-    opacity: 1;
-}
-
-/*ESTILOS PARA LAS VENTANAS QUE APARECEN AL CLICKAR EN LOS PRODUCTOS*/
-.ventana-emergente {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-    overflow: auto;
-}
-
-.contenido-ventana {
-    background-color: #fff;
-    max-width: 80%;
-    max-height: 80%;
-    overflow-y: auto;
-    padding: 20px;
-    border-radius: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.cerrar {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-    color: #000;
-}
-
-.tituloMenu{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-}
-
-.imagenMenu {
-    display: block;
-    margin: 10px auto;
-    max-width: 80%;
-    max-height: 300px;
-    border-radius: 10px;
-}
-
-
-.Boton-añadir-productos {
-    background-color: #f00;
-    color: #fff;
-    border-color: #f0f0f0;
-    margin-left: 70%;
-
-}
 
 
 

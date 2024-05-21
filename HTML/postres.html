@@ -6,6 +6,8 @@
     <title>Menus - Hamburguesas XYZ</title>
     <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" href="../CSS/productos.css">
+    <script src="../SCRIPTS/base.js"></script>
+    <script src="../SCRIPTS/productos.js"></script>
 </head>
 <body>
     <header>
@@ -43,103 +45,33 @@
                     </a>
                 </div>                    
         </div>
+        <div class="place-order-options">
+            <a href="../HTML/hamburguesas.html"><button>Hamburgers</button></a>
+            <a href="../HTML/guarniciones.html"><button>Fittings</button></a>
+            <a href="../HTML/postres.html"><button>Desserts</button></a>
+        </div>
     </header>
 
-                                    <section class="postres">
-                                        <div class="image-box">
-                                        </div>
-                                        <div class="texto-caja">
-                                                <h2>DESSERTS</h2>
-                                        </div>
-                                        <div class="floating-button">
-                                            <img src="../IMG/LogoTipo.PNG" alt="Botón con Imagen">
-                                            <div class="mini-menu" id="miniMenu">
-                                                <a href="guarniciones.html">Guarniciones</a>
-                                                <a href="postres.html">Postres</a>
-                                                </div>
-                                                </div>
-                                
-                                
-                                                </section>
-                                                <div class="postres-texto">
-                                                    <h2 class="aos-init aos-animate">Ends in style</h2>
-                                                </div>
-                                                    
-                                                    <ul class="apartado-postres">
-                                                        <li>
-                                                            <div class="postre-1">
-                                                                <img src="../IMG/TartaQueso.jpg" alt="menu1" class="postre-img">
-                                                                <p>Cheesecake</p>
-                                                                <p class="precio">$5</p>
-                                                                <button class="comprar-btn">Comprar</button>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="postre-1">
-                                                                <img src="../IMG/TartaChocolate.jpeg" alt="menu1" class="postre-img">
-                                                                <p>Chocolate cake</p>
-                                                                <p class="precio">$5</p>
-                                                                <button class="comprar-btn">Comprar</button>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="postre-1">
-                                                                <img src="../IMG/MousseChocolate.jpg" alt="menu1" class="postre-img">
-                                                                <p>Chocolate mousse</p>
-                                                                <p class="precio">$4</p>
-                                                                <button class="comprar-btn">Comprar</button>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="postre-1">
-                                                                <img src="../IMG/HeladoVainilla.jpg" alt="menu1" class="postre-img">
-                                                                <p>Vainilla ice cream</p>
-                                                                <p class="precio">$4</p>
-                                                                <button class="comprar-btn">Comprar</button>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="postre-1">
-                                                                <img src="../IMG/Flan.jpg" alt="menu1" class="postre-img">
-                                                                <p>Custard</p>
-                                                                <p class="precio">$4</p>
-                                                                <button class="comprar-btn">Comprar</button>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="postre-1">
-                                                                <img src="../IMG/TartaZanahoria.jpg" alt="menu1" class="postre-img">
-                                                                <p>Carrot cake</p>
-                                                                <p class="precio">$5</p>
-                                                                <button class="comprar-btn">Comprar</button>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="postre-1">
-                                                                <img src="../IMG/TartaFresa.PNG" alt="menu1" class="postre-img">
-                                                                <p>Strawberry cake</p>
-                                                                <p class="precio">$5</p>
-                                                                <button class="comprar-btn">Comprar</button>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-        
-        
-
-
-
-        <div class="ventana-emergente" id="ventanaEmergente">
-            <div class="contenido-ventana" id="contenidoVentana">
-                <div class="cerrar-container" onclick="cerrarVentana()">
-                    <span class="cerrar">X</span>
-                </div>
-                <h2 id="tituloMenu"></h2>
-                <img id="imagenMenu" src="" alt="Imagen del Menu" class="imagenMenu">
-                <p id="informacionAdicional"></p>
-                <button class="Boton-añadir-productos">Añadir al carro</button>
-            </div>
+                                   
+    <section class="postres">
+        <div class="image-box"></div>
+        <div class="texto-caja">
+            <h2>DESSERTS</h2>
         </div>
-    <script src="../SCRIPTS/productos.js"></script>
+    </section>
+
+    <section class="menus-bloque">
+        <div class="menus-texto">
+            <h2 class="aos-init aos-animate">Ends in style</h2>
+        </div>
+        <ul class="apartado-menus"></ul>
+    </section>
+        
+        
+
+
+
+        
 
     <footer >    
         <p class="text-foot-dir">Second Floor, C. de María Zambrano, 35, 50018 Zaragoza</p>
