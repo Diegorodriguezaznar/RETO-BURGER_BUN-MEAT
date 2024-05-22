@@ -369,19 +369,56 @@ header .pin-logo{
     opacity: 1;
 }
 
+@media (max-width: 768px) {
+    /*HEADER*/
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
 
-/*ESTILOS DE LAS GUARNICIONES*/
+    .logo-img {
+        width: 80px;
+    }
 
+    .cabecera_sup {
+        flex-direction: row;
+        font-size: medium;
+        padding: 10px;
+    }
 
-/*EL BOTON DE COMPRA DE CADA PRODUCTO ----(GUARNICIONES)----*/
+    .cabecera_roja {
+        flex-direction: column;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 5%;
+    }
 
+    .bloques {
+        padding-bottom: 5%;
+    }
 
+    .botones {
+        margin-left: 0%;
+        align-items: center;
+    }
 
-/*ESTILOS DE LOS POSTRES*/
+    .boton {
+        margin-right: 10%;
+        margin-bottom: 10px;
+    }
 
+    .place-order-options {
+        position: static; 
+        width: auto; 
+        padding: 20px; 
 
-/*EL BOTON DE COMPRA DE CADA PRODUCTO ----(POSTRES)----*/
+    }
 
+    .place-order-options a {
+        font-size: 0.9rem; 
+        padding: 8px; 
+    }
+    /*FIN HEADER*/
 
 
 
@@ -466,3 +503,26 @@ footer .face-logo{
     height: 40px;
     width: 40px;
 }
+
+
+/*RESPONSIVE */
+
+@media (max-width: 768px) {
+    .apartado-menus {
+        background-color: #ffffff;
+        margin-left: 5%;
+        margin-right: 40%;
+        text-align: center;
+        display: grid;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        grid-template-columns: repeat(1, 1fr); /* Tres columnas */
+        padding: 0; /* Elimina el padding predeterminado */
+        list-style: none;
+        
+    }
+
+
+
+
+}
+

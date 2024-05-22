@@ -415,8 +415,19 @@ footer .face-logo{
         align-items: center;
     }
 
-    .empleado-mes .description-box {
-        margin-top: 80%;
+    .empleado-mes .description-box{
+        width: 90%;
+    padding-top: 15%;
+    }
+    .empleado-mes .description-box h2, .empleado-mes .description-box p{
+        width: 100%;
     }
     
+}
+
+
+@media (max-width: 768px) {
+.empleado-mes {
+flex-direction: column;
+}
 }

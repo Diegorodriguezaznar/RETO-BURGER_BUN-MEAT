@@ -104,9 +104,11 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
     botonesComprar.forEach(function(boton) {
+        console.log(boton)
         boton.addEventListener('click', function() {
             const contenedorProducto = boton.parentElement;
             const titulo = contenedorProducto.querySelector('p:nth-of-type(1)').innerText;
+            console.log(titulo)
             const precio = parseFloat(contenedorProducto.querySelector('.precio').innerText.replace('$', ''));
             const imagen = contenedorProducto.querySelector('.menu-img, .guarnicion-img, .postre-img').src;
 
@@ -164,6 +166,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
     `;
 
     menu_list.appendChild(card);
+    card.getElementsByClassName("comprar-btn")[0].addEventListener("click", (boton) => {
+        const contenedorProducto = boton.parentElement;
+        const titulo = name
+        const precio = parseFloat(contenedorProducto.querySelector('.precio').innerText.replace('$', ''));
+        const imagen = contenedorProducto.querySelector('.menu-img, .guarnicion-img, .postre-img').src;
+
+        // Agrega el producto al carrito
+        agregarAlCarrito(titulo, precio, imagen);
+    })
 
 	}
 
