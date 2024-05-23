@@ -9,7 +9,7 @@ body {
     display: flex;
     align-items: center; /* Alinea verticalmente los elementos */
     margin: 20px 0;
-    background-image: url('/IMG/Fondo-1.PNG'); 
+    background-image: url('../IMG/Fondo-1.PNG'); 
     background-size: cover;
     border-radius: 10px;
     overflow: hidden;

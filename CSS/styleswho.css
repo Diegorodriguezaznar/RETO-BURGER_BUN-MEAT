@@ -5,7 +5,7 @@ body {
 }
 .encabezado {
     text-align: center;
-    background-image: url(/IMG/fondowho.jpg);
+    background-image: url('../IMG/fondowho.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -83,7 +83,7 @@ h1 {
 }
 .historia{
     padding: 20%;
-    background-image: url(/IMG/joinUs.jpg);
+    background-image: url('../IMG/joinUs.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
