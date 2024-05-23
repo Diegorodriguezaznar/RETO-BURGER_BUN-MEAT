@@ -1,5 +1,17 @@
 
 /*ESTILOS DEL HEADER*/
+.logo{
+    padding-left: 33%;
+    padding-right: 33%;
+}
+.logo2{
+    padding-left: 3.3%;
+    width: 100px;
+    height: 80px;
+}
+
+
+
 .logo-img {
     width: 100px;
     height: 80px;
@@ -35,7 +47,7 @@ header .pin-logo{
 }
 
 .cabecera_sup {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 230, 230);
     color: white;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -54,6 +66,7 @@ header .pin-logo{
     text-align: center;
     padding-left: 30%;
     padding-right: 30%;
+    height: 60px;
 }
 
 
@@ -72,6 +85,17 @@ header .pin-logo{
 .enlace-correo {
     color: rgb(0, 217, 255);
     
+}
+
+.place-order-options {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    left: 1%;
+    width: 10%;
 }
 
 

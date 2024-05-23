@@ -1,4 +1,15 @@
 /*ESTILOS DEL HEADER*/
+.logo{
+    padding-left: 33%;
+    padding-right: 33%;
+}
+.logo2{
+    padding-left: 3.3%;
+    width: 100px;
+    height: 80px;
+}
+
+
 .logo-img {
     width: 100px;
     height: auto;
@@ -35,7 +46,7 @@ header .pin-logo {
 }
 
 .cabecera_sup {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 230, 230);
     color: black;
     padding: 10px 20px;
     display: flex;
@@ -52,8 +63,9 @@ header .pin-logo {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding-left: 35%;
+    padding-left: 30%;
     padding-right: 30%;
+    height: 60px;
 }
 
 
@@ -229,29 +241,24 @@ footer .face-logo {
 }
 
 
-    .place-order-options {
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 13.2%;
-        left: 46%;
-        width: 8%;
-    }
-
+.place-order-options {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    left: 1%;
+    width: 10%;
+}
     .place-order-options a {
-        font-size: 1rem; /* Ajustado a rem para mejor escalabilidad */
+        font-size: large;
         background: rgb(241, 241, 239);
         color: maroon;
+        border: solid maroon;
         width: 100%;
         cursor: pointer;
-        border-radius: 4px; /* Bordes redondeados */
-        margin: 5px 0; /* Espaciado entre botones */
-        text-align: center; /* Centra el texto dentro de los enlaces */
-        text-decoration: none; /* Quita la decoración de enlaces */
-        padding: 10px; /* Añade padding para hacer los botones más clicables */
-        transition: background-color 0.3s ease; /* Transición para mejor experiencia de usuario */
+        border-radius: 4%;
     }
     
     .place-order-options a:hover {
@@ -263,13 +270,10 @@ footer .face-logo {
         background: inherit;
         color: inherit;
         border: inherit;
-        width: 100%;
+        width: inherit;
         cursor: inherit;
-        padding: 0; /* Elimina el padding adicional */
-        text-align: inherit;
-        margin: 0; /* Elimina el margen adicional */
     }
-
+    
 
 
 

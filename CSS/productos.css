@@ -7,6 +7,17 @@ body {
 }
 
 /*ESTILOS DEL HEADER*/
+.logo{
+    padding-left: 33%;
+    padding-right: 33%;
+}
+.logo2{
+    padding-left: 3.3%;
+    width: 100px;
+    height: 80px;
+}
+
+
 .logo-img {
     width: 100px;
     height: 80px;
@@ -19,9 +30,9 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 13.2%;
-    left: 46%;
-    width: 8%;
+    top: 10%;
+    left: 1%;
+    width: 10%;
 }
 
 .place-order-options a {
@@ -72,7 +83,7 @@ header .pin-logo{
 }
 
 .cabecera_sup {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 230, 230);
     color: white;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -91,6 +102,7 @@ header .pin-logo{
     text-align: center;
     padding-left: 30%;
     padding-right: 30%;
+    height: 60px;
 }
 
 
@@ -112,10 +124,8 @@ header .pin-logo{
 .menus {
     display: flex;
     align-items: center;
-    margin: 20px 0;
     background-image: url('../IMG/Imagen-Principal-Productos.jpg');
     background-size: cover;
-    border-radius: 10px;
     align-items: center;
     overflow: hidden;
     width: 100%;
@@ -313,7 +323,7 @@ header .pin-logo{
     margin: 20px;
     border: 5px solid rgb(184, 31, 31);
     border-radius: 1px;
-    background-image: url('../IMG/white-2484120_1920.png');
+    background-color: #ffeded;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
@@ -332,6 +342,7 @@ header .pin-logo{
     left: 40px;
     font-size: 30px;
     color: #000;
+    padding-top: 2.5%;
 }
 
 .menu-1 .descripcion {
@@ -339,6 +350,9 @@ header .pin-logo{
     left: 40px;
     font-size: 18px;
     color: #000;
+    padding-left: 14%;
+    padding-right: 14%;
+    padding-top: 3.5%;
 }
 
 

@@ -123,60 +123,51 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    const fetchProductos = async () => {
+        const url = 'http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=PRODUCTO.FIND_ALL';
 
-window.addEventListener('DOMContentLoaded', (event) => {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const productos = await response.json();
+            console.log(productos);
+            productos.forEach(createProducto);
+        } catch (error) {
+            console.error('Error fetching productos:', error);
+        }
+    };
 
-	const fetchProducto = async () => {
-		for (let i = 1; i <= 30; i++) {
-			await getListPokemon(i);
-		}
-	}
-	
-	/** Método para hacer la petición a la API y obtener el json de resultados */
-	const getListPokemon = async (id) => {
-		const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-        /*"http://localhost:8080/reto/Controller?action=productos.hamburguesa"*/
+    const createProducto = (producto) => {
+        const menu_list = document.querySelector('.apartado-menus');
+        const card = document.createElement('li');
+        card.classList.add('card');
 
-		const result = await fetch(url);
-		const resultJson = await result.json();
-		console.log(resultJson);
-		createProducto(resultJson);
-	}
+        const { Imagen, nombreProducto, precio, Descripcion } = producto;
 
-	/** Método para crear el HTML del Elemento Pokemon*/
-	const createProducto = (producto) => {
-		console.log('createProductoItem => ', producto);
-		const menu_list = document.getElementsByClassName('apartado-menus')[0];
-		const card = document.createElement('li');
-		card.classList.add('card');
-		const {sprites, name, id, types } = producto;
-		let CatProductos = getCategoriaProducto(types);
-
-		card.innerHTML = `
+        card.innerHTML = `
             <div class="menu-1">
-                <img src="${sprites.front_default}" alt="menu1" class="menu-img">
-                <p>${name}</p>
-                <p class="precio">$10</p>
-                <div class="descripcion">slslslls kdkdk</div>
+                <img src="${Imagen}" alt="${nombreProducto}" class="menu-img">
+                <p>${nombreProducto}</p>
+                <p class="precio">$${precio.toFixed(2)}</p>
+                <div class="descripcion">${Descripcion}</div>
                 <button class="comprar-btn">Comprar</button>
             </div>
-        
-    `;
+        `;
 
-    menu_list.appendChild(card);
+        menu_list.appendChild(card);
 
-	}
+        card.querySelector('.comprar-btn').addEventListener('click', () => {
+            agregarAlCarrito(nombreProducto, precio, Imagen);
+        });
+    };
 
-	const getCategoriaProducto = (types) => {
-		let CatProductos = '';
-		types.forEach((element, index) => {
-			if (index === 0) { CatProductos = element.type.name; }
-			else {
-				CatProductos = CatProductos + `, ${element.type.name}`;
-			}
-		});
-		return CatProductos;
-	}
+    const agregarAlCarrito = (titulo, precio, imagen) => {
+        // Aquí puedes implementar la lógica para agregar el producto al carrito
+        console.log('Producto añadido al carrito:', { titulo, precio, imagen });
+    };
 
-	fetchProducto();
+    fetchProductos();
 });
