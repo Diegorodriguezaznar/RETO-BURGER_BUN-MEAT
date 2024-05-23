@@ -214,7 +214,13 @@ footer .face-logo {
 
 }
 
+.textoencajado{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
 .subcaja {
+    display: flex;
     width: 100%;
     height: 100%;
     padding: 25px;
@@ -349,6 +355,9 @@ footer .face-logo {
 
     .subcaja {
         padding: 15px;
+        display: flex;
+        flex-direction: column;
+        
     }
 
     .subcaja h1 {

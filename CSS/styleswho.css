@@ -5,7 +5,7 @@ body {
 }
 .encabezado {
     text-align: center;
-    background-image: url(/IMG/fondowho.jpg);
+    background-image: url('../IMG/fondowho.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -51,30 +51,39 @@ h1 {
 }
 .espaciadorrojo {
     display: flex;
-    justify-content: space-between;
     background-color: rgb(199, 30, 50);
-    padding: 50px;
+    padding-top: 12%;
+    padding-bottom: 12%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-rojo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    text-align: center;
+    align-self: center;
 }
 
 .espaciadorrojo_izquierda p {
-    position: absolute;    
     font-size: 80px; 
-    color: #fff; 
-    padding: 30px 50% 2px 20px; 
-    margin: 20px; 
+    color: #fff;  
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .espaciadorrojo_derecha p {
     font-size: 20px; 
     color: #fff; 
-    margin: 10px; 
-    padding: 2px 2px 2px 40%; 
+    padding-top: 5%;
+    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .historia{
     padding: 20%;
-    background-image: url(/IMG/joinUs.jpg);
+    background-image: url('../IMG/joinUs.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -93,11 +102,11 @@ h1 {
 
 }
 .botonredirect{
-    justify-content: space-between;
+    align-content: right;
     padding-top: 3%;
     width: 50%;
     display: flex;
-    align-items: center;  
+    justify-content: flex-end;
 }
 .historia h2 {
     color: #000;
@@ -285,6 +294,15 @@ footer .face-logo{
     }
     /*FIN HEADER*/
     
+/* Estilos para pantallas de hasta 768px de ancho (móviles) */
+@media (max-width: 768px) {
+
+
+    .cuadroblanco{
+        padding: 14%;
+    }
+}
+
     
 
 }
@@ -309,17 +327,32 @@ footer .face-logo{
     }
 
     .espaciadorrojo_izquierda {
-        padding-right: 50%;
+        width: 90%;
+        justify-content: center;
     }
     .espaciadorrojo_izquierda p {
         font-size: 40px;
-        padding-right: 90%;
     }
     .espaciadorrojo_derecha {
-        padding-top: 60%;
-        padding-right: 80%;
+        padding-left: 0%;
+        justify-content: center;
     }
+
+    .espaciadorrojo_derecha p{
+        font-size: smaller;
+    }
+
     
+
+
+}
+
+@media (max-width: 768px) {
+
+
+
+
+
 
 
 }

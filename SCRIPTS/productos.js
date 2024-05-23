@@ -104,9 +104,11 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
     botonesComprar.forEach(function(boton) {
+        console.log(boton)
         boton.addEventListener('click', function() {
             const contenedorProducto = boton.parentElement;
             const titulo = contenedorProducto.querySelector('p:nth-of-type(1)').innerText;
+            console.log(titulo)
             const precio = parseFloat(contenedorProducto.querySelector('.precio').innerText.replace('$', ''));
             const imagen = contenedorProducto.querySelector('.menu-img, .guarnicion-img, .postre-img').src;
 

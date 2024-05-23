@@ -9,7 +9,7 @@ body {
     display: flex;
     align-items: center; /* Alinea verticalmente los elementos */
     margin: 20px 0;
-    background-image: url('/IMG/Fondo-1.PNG'); 
+    background-image: url('../IMG/Fondo-1.PNG'); 
     background-size: cover;
     border-radius: 10px;
     overflow: hidden;
@@ -427,8 +427,19 @@ footer .face-logo{
         align-items: center;
     }
 
-    .empleado-mes .description-box {
-        margin-top: 80%;
+    .empleado-mes .description-box{
+        width: 90%;
+    padding-top: 15%;
+    }
+    .empleado-mes .description-box h2, .empleado-mes .description-box p{
+        width: 100%;
     }
     
+}
+
+
+@media (max-width: 768px) {
+.empleado-mes {
+flex-direction: column;
+}
 }
