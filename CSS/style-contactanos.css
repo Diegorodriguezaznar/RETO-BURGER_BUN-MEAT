@@ -175,6 +175,28 @@ header .pin-logo{
     color: rgb(0, 217, 255);
     
 }
+/*ESTILOS FOOTER*/
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #8b0606;
+    padding: 1rem;
+    color: #fff;
+}
+footer .x-logo{
+    height: 30px;
+    width: 30px;
+}
+footer .insta-logo{
+    height: 40px;
+    width: 40px;
+}
+footer .face-logo{
+    height: 40px;
+    width: 40px;
+}
 
 
 /* Estilos para pantallas de hasta 768px de ancho (móviles) */

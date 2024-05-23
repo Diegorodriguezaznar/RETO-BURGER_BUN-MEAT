@@ -162,10 +162,8 @@ header .pin-logo{
 .guarniciones {
     display: flex;
     align-items: center;
-    margin: 20px 0;
     background-image: url('../IMG/Imagen-Pagina-Guarniciones.jpg');
     background-size: cover;
-    border-radius: 10px;
     align-items: center;
     overflow: hidden;
     width: 100%;
@@ -204,10 +202,8 @@ header .pin-logo{
 .postres {
     display: flex;
     align-items: center;
-    margin: 20px 0;
     background-image: url('../IMG/Imagen-Pagina-Postres.jpg');
     background-size: cover;
-    border-radius: 10px;
     align-items: center;
     overflow: hidden;
     width: 100%;
@@ -382,7 +378,83 @@ header .pin-logo{
 .menu-1:hover .comprar-btn {
     opacity: 1;
 }
+.carrito {
+    position: fixed;
+    top: 18%;
+    right: 20px; 
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 310px;
+    overflow-y: auto;
+    z-index: 1000;
+    color: #333;
+}
 
+.carrito h3 {
+    margin-top: 0;
+}
+
+#lista-productos {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#lista-productos li {
+    margin-bottom: 5px;
+}
+
+#comprar-todos-btn {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    background-color: rgb(172, 11, 11);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#comprar-todos-btn:hover {
+    background-color: #d00;
+}
+
+.carrito img{
+    height: 20px;
+    width: 20px;
+}
+
+.precio-total{
+    position: absolute;
+
+}
+
+/*ESTILOS FOOTER*/
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #8b0606;
+    padding: 1rem;
+    color: #fff;
+}
+footer .x-logo{
+    height: 30px;
+    width: 30px;
+}
+footer .insta-logo{
+    height: 40px;
+    width: 40px;
+}
+footer .face-logo{
+    height: 40px;
+    width: 40px;
+}
 @media (max-width: 768px) {
     /*HEADER*/
     header {
