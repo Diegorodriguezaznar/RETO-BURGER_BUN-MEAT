@@ -178,17 +178,8 @@ header .pin-logo{
 
 }
 
-.guarnicion-texto h2 {
-    font-size: 100px;
-    text-align: center;
-    color: rgb(138, 22, 22);
-    margin-bottom: 180px;
-    margin-top: 70px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
 
 
-/*ESTILOS DE LA CAJA DE CADA MENU*/
 .guarniciones .texto-caja h2 {
     font-size: 145px;
     margin-right: 200px;
@@ -218,17 +209,8 @@ header .pin-logo{
 
 }
 
-.postres-texto h2 {
-    font-size: 100px;
-    text-align: center;
-    color: rgb(138, 22, 22);
-    margin-bottom: 180px;
-    margin-top: 70px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
 
 
-/*ESTILOS DE LA CAJA DE CADA POSTRE*/
 .postres .texto-caja h2 {
     font-size: 145px;
     margin-right: 200px;
@@ -237,7 +219,66 @@ header .pin-logo{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+/*ESTILOS PARA LA SECCION BEBIDAS (se compone de una imagen que ocupa casi todo con la palabra bebidas dentro)*/
+.bebidas {
+    display: flex;
+    align-items: center;
+    background-image: url('../IMG/Imagen-Pagina-Postres.jpg');
+    background-size: cover;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 550px;
+}
 
+.bebidas .texto-caja {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 210px;
+    margin-left: 700px;
+
+}
+
+
+
+.bebidas .texto-caja h2 {
+    font-size: 145px;
+    margin-right: 200px;
+    color: aliceblue;
+    margin-bottom: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+/*ESTILOS PARA LA SECCION ZARAGOZA (se compone de una imagen que ocupa casi todo con la palabra postres dentro)*/
+.zaragoza {
+    display: flex;
+    align-items: center;
+    background-image: url('../IMG/ZGZ1.jpg');
+    background-size: cover;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 550px;
+}
+
+.zaragoza .texto-caja {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 210px;
+    margin-left: 700px;
+
+}
+
+
+/*ESTILOS DE LA CAJA DE CADA POSTRE*/
+.zaragoza .texto-caja h2 {
+    font-size: 145px;
+    margin-right: 200px;
+    color: aliceblue;
+    margin-bottom: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
 
 /*ESTILOS PARA EL BOTON CON NUESTRO LOGO QUE SE USA PARA CAMBIAR DE TIPO DE PRODUCTO*/
@@ -306,7 +347,7 @@ header .pin-logo{
 /*ESTILOS DE LA CAJA DE CADA MENU*/
 .menus .texto-caja h2 {
     font-size: 145px;
-    margin-right: 200px;
+    align-items: center;
     color: aliceblue;
     margin-bottom: 10px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
