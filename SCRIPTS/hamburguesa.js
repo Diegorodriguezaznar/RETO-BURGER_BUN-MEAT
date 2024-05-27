@@ -98,7 +98,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', (event) => {
     const fetchProductos = async () => {
-        const url = 'http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=PRODUCTO.HAMBURGUESAS';
+        //const url = 'http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=PRODUCTO.HAMBURGUESAS';
+        const url = 'http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=PRODUCTO.FIND_ALL&ID_CATEGORIA_PRODUCTO=1';
 
         try {
             const response = await fetch(url);
