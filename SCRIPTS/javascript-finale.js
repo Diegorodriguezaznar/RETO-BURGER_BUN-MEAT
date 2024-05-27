@@ -4,7 +4,7 @@ window.onload = function () {
     const IMAGENES = [
         '/IMG/carrusel_img1.png',
         '/IMG/carrusel_img2.png',
-        '/IMG/TartaQueso.jpg'
+        '/IMG/carrusel_img3.png'
     ];
     const TIEMPO_INTERVALO_MILESIMAS_SEG = 3500;
     let posicionActual = 0;

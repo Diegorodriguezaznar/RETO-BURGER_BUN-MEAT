@@ -15,27 +15,14 @@ body {
     height: 950px;
 }
 
-.empleado-mes .image-box {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.empleado-mes .inner-box {
-    background-color: rgb(111, 213, 238);
-    padding: 20px;
-    border-radius: 10px;    
-    border-color: rgb(255, 255, 255);
-}
 
 .empleado-mes .image {
-    padding: 20px;
-    border-radius: 3px;
+    padding-left:  400px;
+    border-radius: 2px;
 }
 
 .empleado-mes .image img {
-    width: 100%;
+    width: 50%;
     border-radius: 15px;
 }
 
