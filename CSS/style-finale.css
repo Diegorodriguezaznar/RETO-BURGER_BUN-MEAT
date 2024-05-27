@@ -65,7 +65,7 @@ header .pin-logo {
     text-align: center;
     padding-left: 30%;
     padding-right: 30%;
-    height: 60px;
+    height: 60px
 }
 
 
@@ -139,6 +139,7 @@ footer {
 }
 
 h2 {
+    font-size: 40px;
     display: flex;
     align-items: center;
     justify-content: center;

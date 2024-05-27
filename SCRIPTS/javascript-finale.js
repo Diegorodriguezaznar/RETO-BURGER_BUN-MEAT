@@ -2,8 +2,8 @@
 window.onload = function () {
     // Variables
     const IMAGENES = [
-        '/IMG/ArosCebolla.jpg',
-        '/IMG/Menu-gen.png',
+        '/IMG/carrusel_img1.png',
+        '/IMG/carrusel_img2.png',
         '/IMG/TartaQueso.jpg'
     ];
     const TIEMPO_INTERVALO_MILESIMAS_SEG = 3500;
