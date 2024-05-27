@@ -405,8 +405,6 @@ header .pin-logo{
     border-radius: 30px;
     border: none;
     cursor: pointer;
-    opacity: 0; /* Oculta el botón inicialmente */
-    transition: opacity 0.3s ease;
 }
 
 .menu-1:hover {

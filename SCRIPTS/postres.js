@@ -96,9 +96,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+// FETCH CON LA API DE JSON DE LA BASE DE DATOS
 document.addEventListener('DOMContentLoaded', (event) => {
-    const fetchProductos = async () => {
-        const url = 'http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=PRODUCTO.FIND_ALL';
+    const fetchPostres = async () => {
+        const url = 'http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=PRODUCTO.POSTRES';
 
         try {
             const response = await fetch(url);
@@ -142,5 +143,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.log('Producto añadido al carrito:', { titulo, precio, imagen });
     };
 
-    fetchProductos();
+    fetchPostres();
 });
