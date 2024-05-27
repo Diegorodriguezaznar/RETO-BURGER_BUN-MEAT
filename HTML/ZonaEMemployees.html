@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zona Privada - Empleados</title>
+    <link rel="stylesheet" href="../CSS/ZonaEM.css">
+    <script defer src="../SCRIPTS/ZonaEMemployees.js"></script>
+</head>
+<body>
+
+    <div class="sidebar">
+        <a href="../HTML/ZonaPrivadaprueba.html"><button>CLIENTS</button></a>
+        <a href="../HTML/ZonaEMProductos.html"><button>PRODUCTS</button></a>
+        <a href="../HTML/ZonaEMorders.html"><button>ORDER</button></a>
+        <button>EMPLOYEES</button>
+        <a href="../HTML/finale.html"><button>LOG OUT</button></a>
+    </div>
+
+    <div class="main-content">
+        <h1>Employees</h1>
+        <div>
+            <input type="text" id="order-id" placeholder="Order ID">
+            <input type="text" id="date" placeholder="Date">
+            <input type="email" id="employee-id" placeholder="Employee ID">
+            <input type="text" id="client-id" placeholder="Client ID">
+            <button id="crear-btn">ADD</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Categoría</th>
+                    <th>Contraseña</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="empleados-body">
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

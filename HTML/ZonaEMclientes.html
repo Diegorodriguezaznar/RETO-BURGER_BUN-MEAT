@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zona Privada - Empleados</title>
+    <link rel="stylesheet" href="../CSS/ZonaEM.css">
+    <script defer src="../SCRIPTS/ZonaEmpleados.js"></script>
+</head>
+<body>
+
+    <div class="sidebar">
+        <button>CLIENTS</button>
+        <a href="../HTML/ZonaEMProductos.html"><button>PRODUCTS</button></a>
+        <a href="../HTML/ZonaEMorders.html"><button>ORDER</button></a>
+        <a href="../HTML/ZonaEMemployees.html"><button>EMPLOYEES</button></a>
+        <a href="../HTML/finale.html"><button>LOG OUT</button></a>
+    </div>
+
+    <div class="main-content">
+        <h1>Employees</h1>
+        <div>
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="text" id="apellidos" placeholder="Apellidos">
+            <input type="email" id="gmail" placeholder="Gmail">
+            <input type="text" id="telefono" placeholder="Teléfono">
+            <input type="text" id="direccion" placeholder="Dirección">
+            <button id="crear-btn">ADD</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Client_id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Direccion</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="clientes-body">
+                <!-- Los clientes serán añadidos aquí por JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

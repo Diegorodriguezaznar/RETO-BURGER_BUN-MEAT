@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zona Privada - Productos</title>
+    <link rel="stylesheet" href="../CSS/ZonaEM.css">
+    <script defer src="../SCRIPTS/ZonaEMProductos.js"></script>
+</head>
+<body>
+
+    <div class="sidebar">
+        <a href="../HTML/ZonaPrivadaprueba.html"><button>CLIENTS</button></a>
+        <button>PRODUCTS</button>
+        <a href="../HTML/ZonaEMorders.html"><button>ORDER</button></a>
+        <a href="../HTML/ZonaEMemployees.html"><button>EMPLOYEES</button></a>
+        <a href="../HTML/finale.html"><button>LOG OUT</button></a>
+    </div>
+
+    <div class="main-content">
+        <h1>Products</h1>
+        <div>
+            <input type="text" id="product-id" placeholder="Product ID">
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="description" placeholder="Description">
+            <input type="text" id="category-id" placeholder="Category ID">
+            <input type="text" id="price" placeholder="Price">
+            <button id="crear-btn">ADD</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Category ID</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="productos-body">
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

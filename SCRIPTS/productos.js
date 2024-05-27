@@ -1,35 +1,29 @@
 
-// Define un objeto para almacenar los productos en el carrito junto con su cantidad y su imagen
 let carrito = {};
 
+// METER PRODUCTOS AL CARRITO
 function agregarAlCarrito(titulo, precio, imagen) {
-    // Verifica si el producto ya está en el carrito
+    //UN IF QUE SE ENCARGA DE IDENTIFICAR SI EL PRODUCTO YA ESTA O NO Y SI ESTA EL PRECIO CAMBIA Y LA CANTIDAD SE ELEVA ej.(2 hamburguesas de 1€ son 2€)
     if (carrito.hasOwnProperty(titulo)) {
-        // Si ya está en el carrito, actualiza la cantidad y el precio total
         carrito[titulo].cantidad++;
         carrito[titulo].precioTotal = carrito[titulo].cantidad * precio;
     } else {
-        // Si es un nuevo producto, agrega una entrada al carrito
         carrito[titulo] = {
             cantidad: 1,
             precioTotal: precio,
             imagen: imagen
         };
     }
-    // Actualiza el contenido del carrito en la interfaz
     mostrarCarrito();
 }
 
-
-
-
-/*Funciones para calcular el precio y los productos*/
+// Función para mostrar el contenido del carrito en la interfaz
 function mostrarCarrito() {
     const carritoElemento = document.getElementById('carrito');
-
     const listaProductos = carritoElemento.querySelector('.lista-productos');
-
     const precioTotalElemento = carritoElemento.querySelector('.precio-total');
+
+    // Borra el precio total anterior si existe
     if (precioTotalElemento) {
         precioTotalElemento.remove();
     }
@@ -38,55 +32,32 @@ function mostrarCarrito() {
     listaProductos.innerHTML = '';
 
     // Itera sobre los productos en el carrito y crea elementos para mostrarlos
-    listaProductos.innerHTML = '';
-
     for (const [titulo, producto] of Object.entries(carrito)) {
         const productoElemento = document.createElement('li');
         productoElemento.textContent = `${titulo} - ${producto.cantidad} - ${producto.precioTotal}$`;
         listaProductos.appendChild(productoElemento);
     }
 
-    // Calcula el precio total del carrito
+    
+    // PRECIO FINAL
     const precioTotalCarrito = Object.values(carrito).reduce((total, producto) => total + producto.precioTotal, 0);
-
-    // Agrega el precio total al final del carrito
 
     const nuevoPrecioTotalElemento = document.createElement('div');
     nuevoPrecioTotalElemento.textContent = `Total Price: ${precioTotalCarrito} $`;
     nuevoPrecioTotalElemento.classList.add('precio-total');
-    carritoElemento.children[1].appendChild(nuevoPrecioTotalElemento);
+    carritoElemento.appendChild(nuevoPrecioTotalElemento);
 }
 
-
-
-let carritoHeaderButton // es un div con función de botón
-let carritoBodyDiv
-
-// Funcion click para los botones de "Comprar"
+// Evento para mostrar/ocultar el carrito
 document.addEventListener('DOMContentLoaded', function() {
-    const botonesComprar = document.querySelectorAll('.comprar-btn');
-    carritoHeaderButton = document.getElementsByClassName("carrito-header")[0]
-    carritoBodyDiv = document.getElementsByClassName("carrito-body")[0]
+    const carritoHeaderButton = document.querySelector('.carrito-header');
+    const carritoBodyDiv = document.querySelector('.carrito-body');
 
-    carritoHeaderButton.addEventListener("click", () => {
-        if (carritoBodyDiv.style.display != "none") {
-            carritoBodyDiv.style.display = "none"
-        } else {carritoBodyDiv.style.display = "block"}
-    })
-
-    botonesComprar.forEach(function(boton) {
-        console.log(boton)
-        boton.addEventListener('click', function() {
-            const contenedorProducto = boton.parentElement;
-            const titulo = contenedorProducto.querySelector('p:nth-of-type(1)').innerText;
-            console.log(titulo)
-            const precio = parseFloat(contenedorProducto.querySelector('.precio').innerText.replace('$', ''));
-            const imagen = contenedorProducto.querySelector('.menu-img, .guarnicion-img, .postre-img').src;
-
-            // Agrega el producto al carrito
-            agregarAlCarrito(titulo, precio, imagen);
-        });
+    carritoHeaderButton.addEventListener('click', () => {
+        carritoBodyDiv.style.display = carritoBodyDiv.style.display === 'none' ? 'block' : 'none';
     });
+
+    fetchProductos();
 });
 
 
@@ -97,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    const url = 'http://localhost:8080/RETO_BACK_BIEN/Controller?PRODUCTO.FIND_ALL';
+    const url = 'http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=PRODUCTO.FIND_ALL';
     const fetchProductos = async () => {
         
 
