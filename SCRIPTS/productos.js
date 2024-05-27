@@ -97,8 +97,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', (event) => {
+    const url = 'http://localhost:8080/RETO_BACK_BIEN/Controller?PRODUCTO.FIND_ALL';
     const fetchProductos = async () => {
-        const url = 'http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=PRODUCTO.FIND_ALL';
+        
 
         try {
             const response = await fetch(url);

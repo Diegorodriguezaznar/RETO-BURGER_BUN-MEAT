@@ -1,4 +1,3 @@
-
 /*ESTILOS DEL HEADER*/
 .logo{
     padding-left: 33%;
@@ -11,11 +10,40 @@
 }
 
 
-
 .logo-img {
     width: 100px;
     height: 80px;
     padding-left: 50px
+}
+
+.place-order-options {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    left: 1%;
+    width: 10%;
+}
+
+.place-order-options a {
+    font-size: large;
+    background: rgb(241, 241, 239);
+    color: maroon;
+    border: solid maroon;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 4%;
+}
+
+.place-order-options button {
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+    border: inherit;
+    width: inherit;
+    cursor: inherit;
 }
 
 
@@ -80,82 +108,15 @@ header .pin-logo{
 
 .enlace-blanco {
     color: white;
+    text-decoration: none; 
 }
-
-.enlace-correo {
-    color: rgb(0, 217, 255);
-    
-}
-
-.place-order-options {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 10%;
-    left: 1%;
-    width: 10%;
-}
-
-
-/* Estilos para pantallas de hasta 768px de ancho (móviles) */
-@media (max-width: 768px) {
-    /*HEADER*/
-    header {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .logo-img {
-        width: 80px;
-    }
-
-    .cabecera_sup {
-        flex-direction: row;
-        font-size: medium;
-        padding: 10px;
-    }
-
-    .cabecera_roja {
-        flex-direction: column;
-        padding-left: 10%;
-        padding-right: 10%;
-        padding-top: 5%;
-    }
-
-    .bloques {
-        padding-bottom: 5%;
-    }
-
-    .botones {
-        margin-left: 0%;
-        align-items: center;
-    }
-
-    .boton {
-        margin-right: 10%;
-        margin-bottom: 10px;
-    }
-
-    .place-order-options {
-        position: static; 
-        width: auto; 
-        padding: 20px; 
-
-    }
-
-    .place-order-options a {
-        font-size: 0.9rem; 
-        padding: 8px; 
-    }
     /*FIN HEADER*/
     .info-text h2  {
         font-size: 50px;
 
     }
 
-}
+
 /* Estilos para pantallas de hasta 480px de ancho (móviles pequeños) */
 @media (max-width: 480px) {
     .logo-img {
@@ -250,13 +211,3 @@ header .pin-logo{
 .form-container button:hover {
     background-color: #0056b3;
 }
-
-
-
-
-
-
-
-
-
-
