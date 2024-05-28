@@ -26,6 +26,15 @@ body {
     color: #ffffff;
 }
 
+.cabecera_sup {
+    background-color: rgb(255, 230, 230);
+    color: black;
+    padding: 1vh 10vh;
+    display: flex;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+}
 
 .info-text h2 {
     margin-top: 0;
@@ -89,12 +98,7 @@ body {
 }
 
 /*ESTILOS DEL HEADER*/
-.logo{
-    padding-left: 33%;
-    padding-right: 33%;
-}
 .logo2{
-    padding-left: 3.3%;
     width: 100px;
     height: 80px;
 }
@@ -104,7 +108,6 @@ body {
 .logo-img {
     width: 100px;
     height: 80px;
-    padding-left: 50px
 }
 
 
@@ -204,7 +207,6 @@ footer .face-logo{
     /*HEADER*/
     header {
         flex-direction: column;
-        padding: 10px;
     }
 
     .logo-img {
@@ -212,6 +214,7 @@ footer .face-logo{
     }
 
     .cabecera_sup {
+        justify-content:baseline;
         flex-direction: row;
         font-size: medium;
         padding: 10px;

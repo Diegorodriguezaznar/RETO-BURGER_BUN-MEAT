@@ -1,10 +1,6 @@
 /*ESTILOS DEL HEADER*/
-.logo{
-    padding-left: 33%;
-    padding-right: 33%;
-}
+
 .logo2{
-    padding-left: 3.3%;
     width: 100px;
     height: 80px;
 }
@@ -13,7 +9,6 @@
 .logo-img {
     width: 100px;
     height: auto;
-    padding-left: 50px;
 }
 
 .botones {
@@ -38,6 +33,7 @@
 
 header {
     width: 100%;
+    
 }
 
 header .pin-logo {
@@ -48,7 +44,7 @@ header .pin-logo {
 .cabecera_sup {
     background-color: rgb(255, 230, 230);
     color: black;
-    padding: 10px 20px;
+    padding: 1vh 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,7 +56,7 @@ header .pin-logo {
     background-color: rgb(117, 0, 0);
     color: white;
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
     text-align: center;
     padding-left: 30%;
@@ -73,9 +69,9 @@ header .pin-logo {
     flex: 1;
     box-sizing: border-box;
     display: flex;
-    align-items: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: medium;
+S
 }
 
 .enlace-blanco {
@@ -106,7 +102,7 @@ footer {
 
 .menus-container {
     display: flex;
-    margin-top: 80px;
+    margin-top: 20px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -289,7 +285,7 @@ footer .face-logo {
     /*HEADER*/
     header {
         flex-direction: column;
-        padding: 10px;
+
     }
 
     .logo-img {
@@ -297,6 +293,7 @@ footer .face-logo {
     }
 
     .cabecera_sup {
+        justify-content:baseline;
         flex-direction: row;
         font-size: medium;
         padding: 10px;
@@ -336,6 +333,7 @@ footer .face-logo {
     }
     /*FIN HEADER*/
 
+    
     .carousel {
         flex-direction: column;
     }
@@ -359,6 +357,9 @@ footer .face-logo {
         display: flex;
         flex-direction: column;
         
+    }
+    h2{
+        text-align: center;
     }
 
     .subcaja h1 {

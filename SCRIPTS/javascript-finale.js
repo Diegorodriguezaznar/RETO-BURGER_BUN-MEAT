@@ -2,11 +2,11 @@
 window.onload = function () {
     // Variables
     const IMAGENES = [
-        '/IMG/carrusel_img1.png',
-        '/IMG/carrusel_img2.png',
-        '/IMG/carrusel_img3.png'
+        '../IMG/carrusel_img1.png',
+        '../IMG/carrusel_img2.png',
+        '../IMG/carrusel_img3.png'
     ];
-    const TIEMPO_INTERVALO_MILESIMAS_SEG = 3500;
+    const TIEMPO_INTERVALO_MILESIMAS_SEG = 5500;
     let posicionActual = 0;
     let $botonRetroceder = document.querySelector('#retroceder');
     let $botonAvanzar = document.querySelector('#avanzar');
