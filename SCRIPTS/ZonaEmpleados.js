@@ -19,18 +19,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const createCliente = (cliente) => {
         const clientesBody = document.getElementById('clientes-body');
         const row = document.createElement('tr');
-        row.setAttribute('data-id', cliente.ID_Cliente); // Añadimos un atributo data-id con el ID del cliente
+        row.setAttribute('data-id', cliente.id_cliente); // Añadimos un atributo data-id con el ID del cliente
+        
 
         // Utiliza las claves del JSON que proporcionaste
-        const { ID_Cliente, nombre_Cliente, apellidos_Cliente, gmail_cliente, num_telefono, Direccion } = cliente;
+        const { id_cliente, nombre_Cliente, apellidos_Cliente, gmail_cliente, num_telefono, Direccion } = cliente;
 
         row.innerHTML = `
-            <td>${ID_Cliente}</td>
             <td>${nombre_Cliente}</td>
             <td>${apellidos_Cliente}</td>
             <td>${gmail_cliente}</td>
             <td>${num_telefono}</td>
             <td>${Direccion}</td>
+            <td>${id_cliente}</td>
             <td>
                 <button class="eliminar-btn">Eliminar</button>
             </td>
@@ -40,27 +41,42 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         // Añadir evento para el botón de eliminar
         row.querySelector('.eliminar-btn').addEventListener('click', () => {
-            eliminarCliente(cliente.ID_Cliente);
+            eliminarCliente(cliente.id_cliente);
         });
     };
 
-    const eliminarCliente = async (idCliente) => {
-        const url = `http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=CLIENTES.DELETE&id=${idCliente}`;
 
+
+
+
+
+
+
+    const eliminarCliente = async (id_cliente) => {
+        const url = `http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=CLIENTES.DELETE&ID_CLIENTE=${id_cliente}`;
+    
         try {
             const response = await fetch(url, {
-                method: 'DELETE',
+                method: 'post',
+                mode: 'no-cors'
             });
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            // Remover la fila del cliente eliminado del DOM
-            document.querySelector(`tr[data-id="${idCliente}"]`).remove();
-            console.log(`Cliente con ID ${idCliente} eliminado correctamente.`);
+    
+            // Con 'no-cors', no puedes verificar el estado de la respuesta
+            // Pero asumimos que la solicitud fue exitosa y procedemos a eliminar el elemento del DOM
+    
+            await document.querySelector(`tr[data-id="${id_cliente}"]`).remove();
+            console.log(`Cliente con ID ${id_cliente} eliminado correctamente.`);
         } catch (error) {
             console.error('Error al eliminar cliente:', error);
         }
     };
+    
+
+
+
+
+
+
 
     const crearCliente = async () => {
         const nombre = document.getElementById('nombre').value;
@@ -77,7 +93,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             Direccion: direccion,
         };
 
-        const url = 'http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=CLIENTES.CREATE';
+        const url = 'http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=CLIENTES.ADD';
 
         try {
             const response = await fetch(url, {

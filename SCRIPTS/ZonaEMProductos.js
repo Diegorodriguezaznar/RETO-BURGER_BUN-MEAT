@@ -1,17 +1,4 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-
-    document.getElementById('crear-btn').addEventListener('click', () => {
-        let p = {
-            id_producto: document.getElementById('product-id').value,
-            nombreProducto: document.getElementById('name').value,
-            Descripcion: document.getElementById('description').value,
-            id_categoria_producto: document.getElementById('category-id').value,
-            precio: document.getElementById('price').value
-        }        
-        crearProducto(p);
-
-    });
-
     const fetchProductos = async () => {
         const url = 'http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=PRODUCTO.FIND_ALL';
 
@@ -33,13 +20,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const productosBody = document.getElementById('productos-body');
         const row = document.createElement('tr');
         row.setAttribute('data-id', producto.id_producto); // Añadimos un atributo data-id con el ID del producto
-
-     
+        
         // Utiliza las claves del JSON que proporcionaste
-        const { id_producto, nombreProducto, Descripcion, id_categoria_producto, precio } = producto;
+        const { Imagen, id_producto, nombreProducto, Descripcion, id_categoria_producto, precio } = producto;
 
         row.innerHTML = `
             <td>${id_producto}</td>
+            <td>${Imagen}</td>
             <td>${nombreProducto}</td>
             <td>${Descripcion}</td>
             <td>${id_categoria_producto}</td>
@@ -54,75 +41,91 @@ document.addEventListener('DOMContentLoaded', (event) => {
         // Añadir evento para el botón de eliminar
         row.querySelector('.eliminar-btn').addEventListener('click', () => {
             eliminarProducto(producto.id_producto);
-        });        
+        });
     };
 
-        
+
 
     const eliminarProducto = async (id_producto) => {
-        const url = `http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=PRODUCTO.DELETE&id=${id_producto}`;
-
+        const url = `http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=PRODUCTO.DELETE&ID_PRODUCTO=${id_producto}`;
+    
         try {
-            const response = await fetch(url, { method: 'DELETE', mode:'no-cors' });
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            console.log(`Producto con id ${id_producto} eliminado.`);
-            // Remover la fila de la tabla
-            const rowToDelete = document.querySelector(`tr[data-id='${id_producto}']`);
-            rowToDelete.remove();
+            const response = await fetch(url, {
+                method: 'post',
+                mode: 'no-cors'
+            });
+    
+            // Con 'no-cors', no puedes verificar el estado de la respuesta
+            // Pero asumimos que la solicitud fue exitosa y procedemos a eliminar el elemento del DOM
+    
+            await document.querySelector(`tr[data-id="${id_producto}"]`).remove();
+            console.log(`Producto con ID ${id_producto} eliminado correctamente.`);
         } catch (error) {
-            console.error('Error eliminando producto:', error);
-        }
-    };
-
-    const crearProducto = async (producto) => {
-        const url = `http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=PRODUCTO.ADD`;
-
-        try {
-            const response = await fetch(url,                                 
-                { 
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        
-                    },
-                    mode: "no-cors",
-                    body: JSON.stringify(producto), // data can be `string` or {object}!                   
-                });
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            console.log(`Producto con id ${id_producto} creado.`);
-            // Remover la fila de la tabla
-            const rowToDelete = document.querySelector(`tr[data-id='${id_producto}']`);
-            rowToDelete.remove();
-        } catch (error) {
-            console.error('Error eliminando producto:', error);
+            console.error('Error al eliminar producto:', error);
         }
     };
 
 
+
+
+
+
+
+
+
+
+    const crearProducto = async () => {
+        const product_id = document.getElementById('product_id').value;
+        const image = document.getElementById('image').value;
+        const name = document.getElementById('name').value;
+        const Description = document.getElementById('Description').value;
+        const id_category = document.getElementById('id_category').value;
+        const price = document.getElementById('price').value;
+
+        const data = {
+            id_producto: product_id,
+            Imagen: image,
+            nombreProducto: name,
+            Descripcion: Description,
+            id_categoria_producto: id_category,
+            precio: price,
+        };
+
+        const url = 'http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=PRODUCTOS.ADD';
+
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'mode': 'no-cors'
+                },
+                body: JSON.stringify(data),
+            });
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const nuevoProducto = await response.json();
+            console.log('Nuevo producto creado:', nuevoProducto);
+
+            // Limpiar los inputs después de crear el producto
+            document.getElementById('product_id').value = '';
+            document.getElementById('image').value = '';
+            document.getElementById('name').value = '';
+            document.getElementById('Description').value = '';
+            document.getElementById('id_category').value = '';
+            document.getElementById('price').value = '';
+
+            // Crear la nueva fila en la tabla con el nuevo producto
+            createProducto(nuevoProducto);
+        } catch (error) {
+            console.error('Error al crear producto:', error);
+        }
+    };
+
+    // Agregar evento al botón de crear producto
+    document.getElementById('crear-btn').addEventListener('click', crearProducto);
+
+    // Iniciar la carga de productos al cargar la página
     fetchProductos();
-
-    ;
-
-
 });
-
-
-/*
-
-   fetch(url, {
-            method: "POST", // or 'PUT'
-            body: JSON.stringify(producto), // data can be `string` or {object}!
-            headers: {
-              "Content-Type": "application/json",
-              "mode": "no-cors"
-            },
-          })
-            .then((res) => res.json())
-            .catch((error) => console.error("Error:", error))
-            .then((response) => {
-
-                */

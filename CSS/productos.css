@@ -408,6 +408,8 @@ header .pin-logo{
 .menu-1:hover .comprar-btn {
     opacity: 1;
 }
+
+/* CARRITO */
 .carrito {
     position: fixed;
     top: 18%;
@@ -415,9 +417,9 @@ header .pin-logo{
     background-color: #fff;
     border: 2px solid #ccc;
     border-radius: 5px;
-    padding: 10px;
-    width: 310px;
-    overflow-y: auto;
+    padding: 10px 20px 30px 30px;
+    width: 350px;
+    overflow-y: hidden;
     z-index: 1000;
     color: #333;
 }
@@ -430,6 +432,8 @@ header .pin-logo{
     list-style: none;
     padding: 0;
     margin: 10px 0;
+    overflow-y: auto; 
+    max-height: 200px; 
 }
 
 #lista-productos li {
@@ -444,9 +448,8 @@ header .pin-logo{
     color: #fff;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease; /* Cambio: Suaviza la transición */
 }
 
 #comprar-todos-btn:hover {
@@ -460,7 +463,19 @@ header .pin-logo{
 
 .precio-total{
     position: absolute;
+    margin-top: 10px;
+}
 
+.eliminar-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.eliminar-btn:hover {
+    background-color: darkred;
 }
 
 /*ESTILOS FOOTER*/
