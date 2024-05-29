@@ -11,8 +11,7 @@
 
     <div class="sidebar">
         <a href="../HTML/ZonaEMclientes.html"><button>CLIENTS</button></a>
-        <a href="../HTML/ZonaEMProductos.html"><button>PRODUCTS</button></a>
-        <a href="../HTML/ZonaEMorders.html"><button>ORDER</button></a>
+        <a href="../HTML/ZonaEMproductos.html"><button>PRODUCTS</button></a>
         <button>EMPLOYEES</button>
         <a href="../HTML/finale.html"><button>LOG OUT</button></a>
     </div>
@@ -20,23 +19,27 @@
     <div class="main-content">
         <h1>Employees</h1>
         <div>
-            <input type="text" id="order-id" placeholder="Order ID">
-            <input type="text" id="date" placeholder="Date">
-            <input type="email" id="employee-id" placeholder="Employee ID">
-            <input type="text" id="client-id" placeholder="Client ID">
+            <input type="text" id="empleado_id" placeholder="Employee ID">
+            <input type="text" id="nombre" placeholder="First Name">
+            <input type="text" id="apellidos" placeholder="Last Name">
+            <input type="text" id="email" placeholder="Email">
+            <input type="text" id="telefono" placeholder="Phone Number">
+            <input type="text" id="id_categoria_empleado" placeholder="Category ID">
+            <input type="password" id="contrasena" placeholder="Password">
             <button id="crear-btn">ADD</button>
+            <button id="actualizar-btn" style="display: none;">UPDATE</button> <!-- Botón de actualizar oculto por defecto -->
         </div>
         <table>
             <thead>
                 <tr>
                     <th>Employee ID</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
                     <th>Email</th>
-                    <th>Teléfono</th>
-                    <th>Categoría</th>
-                    <th>Contraseña</th>
-                    <th>Acciones</th>
+                    <th>Phone Number</th>
+                    <th>Category ID</th>
+                    <th>Password</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody id="empleados-body">

@@ -3,13 +3,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const url = 'http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=PRODUCTO.FIND_ALL';
 
         try {
-            console.log('Fetching products from:', url);  // Mensaje de depuración
+            console.log('Fetching products from:', url);
             const response = await fetch(url);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const productos = await response.json();
-            console.log('Productos recibidos:', productos);  // Verifica que los datos se están recibiendo correctamente
+            console.log('Productos recibidos:', productos);
             productos.forEach(createProducto);
         } catch (error) {
             console.error('Error fetching productos:', error);
@@ -18,15 +18,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const createProducto = (producto) => {
         const productosBody = document.getElementById('productos-body');
+        if (!productosBody) {
+            console.error('Element with id "productos-body" not found');
+            return;
+        }
+
         const row = document.createElement('tr');
-        row.setAttribute('data-id', producto.id_producto); // Añadimos un atributo data-id con el ID del producto
-        
+        row.setAttribute('data-id', producto.id_producto);
+
         // Utiliza las claves del JSON que proporcionaste
         const { Imagen, id_producto, nombreProducto, Descripcion, id_categoria_producto, precio } = producto;
 
         row.innerHTML = `
             <td>${id_producto}</td>
-            <td>${Imagen}</td>
+            <td><img src="${Imagen}" alt="${nombreProducto}" width="50" height="50"/></td>
             <td>${nombreProducto}</td>
             <td>${Descripcion}</td>
             <td>${id_categoria_producto}</td>
@@ -44,35 +49,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     };
 
-
-
     const eliminarProducto = async (id_producto) => {
         const url = `http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=PRODUCTO.DELETE&ID_PRODUCTO=${id_producto}`;
-    
+
         try {
             const response = await fetch(url, {
-                method: 'post',
+                method: 'POST',
                 mode: 'no-cors'
             });
-    
-            // Con 'no-cors', no puedes verificar el estado de la respuesta
-            // Pero asumimos que la solicitud fue exitosa y procedemos a eliminar el elemento del DOM
-    
+
             await document.querySelector(`tr[data-id="${id_producto}"]`).remove();
             console.log(`Producto con ID ${id_producto} eliminado correctamente.`);
         } catch (error) {
             console.error('Error al eliminar producto:', error);
         }
     };
-
-
-
-
-
-
-
-
-
 
     const crearProducto = async () => {
         const product_id = document.getElementById('product_id').value;
@@ -91,24 +82,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
             precio: price,
         };
 
-        const url = 'http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=PRODUCTOS.ADD';
+        const url = `http://localhost:8080/RETO_BACK_BIEN/Controller?ACTION=PRODUCTO.ADD&ID_PRODUCTO=${product_id}&IMAGEN=${image}&NOMBRE=${name}&DESCRIPCION=${Description}&ID_CATEGORIAPRODUCTO=${id_category}&PRECIO=${price}`;
 
         try {
             const response = await fetch(url, {
-                method: 'POST',
+                method: 'POST', mode: 'no-cors',
+
                 headers: {
-                    'Content-Type': 'application/json',
-                    'mode': 'no-cors'
+                    'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(data),
+                body: JSON.stringify(data)
             });
+
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            const nuevoProducto = await response.json();
+
+            const nuevoProducto = data;
             console.log('Nuevo producto creado:', nuevoProducto);
 
-            // Limpiar los inputs después de crear el producto
             document.getElementById('product_id').value = '';
             document.getElementById('image').value = '';
             document.getElementById('name').value = '';
@@ -116,16 +108,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
             document.getElementById('id_category').value = '';
             document.getElementById('price').value = '';
 
-            // Crear la nueva fila en la tabla con el nuevo producto
             createProducto(nuevoProducto);
         } catch (error) {
             console.error('Error al crear producto:', error);
         }
     };
 
-    // Agregar evento al botón de crear producto
+    
+
     document.getElementById('crear-btn').addEventListener('click', crearProducto);
 
-    // Iniciar la carga de productos al cargar la página
     fetchProductos();
 });
