@@ -214,7 +214,7 @@ header .pin-logo{
 .bebidas {
     display: flex;
     align-items: center;
-    background-image: url('../IMG/Imagen-Pagina-Postres.jpg');
+    background-color: #000;
     background-size: cover;
     align-items: center;
     overflow: hidden;
