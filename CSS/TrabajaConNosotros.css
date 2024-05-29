@@ -17,7 +17,8 @@ body {
 
 
 .empleado-mes .image {
-    padding-left:  400px;
+    padding-top: 30px;
+    padding-left:  33%;
     border-radius: 2px;
 }
 
@@ -356,6 +357,9 @@ footer .face-logo{
         width: 100%;
         height: auto;
     }
+    .empleado-mes {
+        flex-direction: column;
+        height: 700px ;
 }
 
 /* Estilos para pantallas de hasta 480px de ancho (móviles pequeños) */
@@ -419,7 +423,6 @@ footer .face-logo{
 
 
 @media (max-width: 768px) {
-.empleado-mes {
-flex-direction: column;
-}
+
+
 }
