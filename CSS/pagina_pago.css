@@ -1,0 +1,372 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+
+/*ESTILOS DEL HEADER*/
+
+.logo2{
+    width: 100px;
+    height: 80px;
+}
+
+
+.logo-img {
+    width: 100px;
+    height: 80px;
+}
+
+
+.botones {
+    display: flex;
+    align-items: center;
+}
+
+.boton {
+    margin-right: 20px;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    color: black; 
+    font-family: Arial, sans-serif; 
+    cursor: pointer;
+    border-radius: 5px;
+    border: black 5px double; 
+}
+
+.boton p {
+    margin: 0;
+}
+header {
+    width: 100%;
+}
+header .pin-logo{
+    height: 30px;
+    width: 30px;
+}
+
+.cabecera_sup {
+    background-color: rgb(255, 230, 230);
+    color: white;
+padding: 1vh 10vh;
+    display: flex;
+    justify-content: space-between;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+}
+
+.cabecera_roja {
+    background-color: rgb(117, 0, 0);
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-left: 30%;
+    padding-right: 30%;
+    height: 60px;
+}
+
+
+.bloques {
+    flex: 1;
+    box-sizing: border-box;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: medium;
+}
+
+.enlace-blanco {
+    color: white;
+    text-decoration: none; 
+}
+
+/*ESTILOS FOOTER*/
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #8b0606;
+    padding: 1rem;
+    color: #fff;
+}
+footer .x-logo{
+    height: 30px;
+    width: 30px;
+}
+footer .insta-logo{
+    height: 40px;
+    width: 40px;
+}
+footer .face-logo{
+    height: 40px;
+    width: 40px;
+}
+
+.place-order-options {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    left: 1%;
+    width: 10%;
+}
+
+.place-order-options a {
+    font-size: large;
+    background: rgb(241, 241, 239);
+    color: maroon;
+    border: solid maroon;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 4%;
+}
+
+.place-order-options button {
+    font-size: inherit;
+    background: inherit;
+    color: inherit;
+    border: inherit;
+    width: inherit;
+    cursor: inherit;
+}
+
+.Cuestionario{
+    padding-left:35% ;
+    padding-right:35% ;
+    padding-bottom: 9%;
+}
+
+.form-container {
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-left: 25%;
+    padding: 10%;
+}
+.form-container h2 {
+    margin-bottom: 20px;
+}
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form-container button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+/* Estilos para pantallas de hasta 768px de ancho (móviles) */
+@media (max-width: 768px) {
+    /*HEADER*/
+    header {
+        flex-direction: column;
+    }
+
+    .logo-img {
+        width: 80px;
+    }
+
+    .cabecera_sup {
+        flex-direction: row;
+        font-size: medium;
+        padding: 10px;
+    }
+
+    .cabecera_roja {
+        flex-direction: baseline;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 5%;
+    }
+
+    .bloques {
+        padding-bottom: 5%;
+    }
+
+    .botones {
+        margin-left: 0%;
+        align-items: center;
+    }
+
+    .boton {
+        margin-right: 10%;
+        margin-bottom: 10px;
+    }
+
+    .place-order-options {
+        position: static; 
+        width: auto; 
+        padding: 20px; 
+
+    }
+
+    .place-order-options a {
+        font-size: 0.9rem; 
+        padding: 8px; 
+    }
+    /*FIN HEADER*/
+
+    .carousel {
+        flex-direction: column;
+    }
+
+    .carousel img {
+        width: 100%;
+    }
+
+    .publicidad {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .cajas {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    .subcaja {
+        padding: 15px;
+    }
+
+    .subcaja h1 {
+        font-size: 3ch;
+    }
+
+    .subcaja p {
+        font-size: 16px;
+    }
+    
+    .publicidad img,
+    #flecha {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Estilos para pantallas de hasta 480px de ancho (móviles pequeños) */
+@media (max-width: 480px) {
+    .logo-img {
+        width: 80px;
+    }
+
+    .boton {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cabecera_sup {
+        font-size: small;
+    }
+
+    .cabecera_roja {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    .place-order-options {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 10%;
+        left: 1%;
+        width: 10%;
+    }
+
+    .place-order-options a {
+        font-size: large;
+        background: rgb(241, 241, 239);
+        color: maroon;
+        border: solid maroon;
+        width: 100%;
+        cursor: pointer;
+        border-radius: 4%;
+    }
+    
+    .place-order-options button {
+        font-size: inherit;
+        background: inherit;
+        color: inherit;
+        border: inherit;
+        width: inherit;
+        cursor: inherit;
+    }
+    
+.Cuestionario{
+    padding-left: 0px ;
+    padding-right: 0px ;
+
+}
+    
+}
+
+
+@media (max-width: 768px) {
+
+
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-container h2 {
+    margin-bottom: 20px;
+}
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form-container button:hover {
+    background-color: #0056b3;
+}
+.Cuestionario{
+    padding-left: 0px ;
+    padding-right: 0px ;
+
+}
+}
